@@ -309,7 +309,7 @@ erpnext.PointOfSale.ItemCart = class {
 				label: __('Customer'),
 				fieldtype: 'Link',
 				options: 'Customer',
-				placeholder: __('Search by customer name, phone, email.'),
+				placeholder: __('Search by customer name, phone, email, tax_id.'),
 				get_query: () => query,
 				onchange: function() {
 					if (this.value) {

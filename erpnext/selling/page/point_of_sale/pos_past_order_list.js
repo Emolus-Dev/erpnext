@@ -84,7 +84,7 @@ erpnext.PointOfSale.PastOrderList = class {
 		return frappe.call({
 			method: "erpnext.selling.page.point_of_sale.point_of_sale.get_past_order_list",
 			freeze: true,
-			args: { search_term, status },
+			args: { search_term, status, currentUser: frappe.session.user },
 			callback: (response) => {
 				frappe.dom.unfreeze();
 				response.message.forEach(invoice => {

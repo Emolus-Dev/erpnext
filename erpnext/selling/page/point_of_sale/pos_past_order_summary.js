@@ -255,7 +255,8 @@ erpnext.PointOfSale.PastOrderSummary = class {
 				send_email: 1,
 				print_format,
 				sender_full_name: frappe.user.full_name(),
-				_lang: doc.language
+				_lang: doc.language,
+				content: ""
 			},
 			callback: r => {
 				if (!r.exc) {
