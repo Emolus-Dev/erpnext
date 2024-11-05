@@ -77,7 +77,7 @@
  "icon": "icon-legal",
  "idx": 1,
  "links": [],
- "modified": "2023-02-01 14:33:39.246532",
+ "modified": "2024-10-27 12:15:53.258672",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Terms and Conditions",
@@ -130,6 +130,10 @@
   {
    "read": 1,
    "role": "Stock User"
+  },
+  {
+   "read": 1,
+   "role": "Customer"
   }
  ],
  "quick_entry": 1,

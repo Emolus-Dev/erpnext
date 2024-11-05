@@ -11,11 +11,22 @@ from frappe import _, scrub
 from frappe.model.meta import get_field_precision
 from frappe.query_builder import Case
 from frappe.query_builder.functions import CombineDatetime, Sum
-from frappe.utils import cint, flt, get_link_to_form, getdate, now, nowdate, nowtime, parse_json
+from frappe.utils import (
+	cint,
+	flt,
+	get_link_to_form,
+	getdate,
+	now,
+	nowdate,
+	nowtime,
+	parse_json,
+)
 
 import erpnext
 from erpnext.stock.doctype.bin.bin import update_qty as update_bin_qty
-from erpnext.stock.doctype.inventory_dimension.inventory_dimension import get_inventory_dimensions
+from erpnext.stock.doctype.inventory_dimension.inventory_dimension import (
+	get_inventory_dimensions,
+)
 from erpnext.stock.doctype.serial_and_batch_bundle.serial_and_batch_bundle import (
 	get_available_batches,
 )
@@ -725,7 +736,7 @@ class update_entries_after(object):
 				if sle.get(dimension.get("fieldname")):
 					has_dimensions = True
 
-		if sle.serial_and_batch_bundle:
+		if sle.serial_and_batch_bundle and self.valuation_method != "Moving Average":
 			self.calculate_valuation_for_serial_batch_bundle(sle)
 		else:
 			if sle.voucher_type == "Stock Reconciliation" and not sle.batch_no and not has_dimensions:

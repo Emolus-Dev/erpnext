@@ -21,8 +21,8 @@ erpnext.utils.BarcodeScanner = class BarcodeScanner {
 
 		// optional sound name to play when scan either fails or passes.
 		// see https://frappeframework.com/docs/v14/user/en/python-api/hooks#sounds
-		this.success_sound = opts.play_success_sound;
-		this.fail_sound = opts.play_fail_sound;
+		this.success_sound = opts.play_success_sound || "success-scan";
+		this.fail_sound = opts.play_fail_sound || "error-scan";
 
 		// any API that takes `search_value` as input and returns dictionary as follows
 		// {
@@ -100,6 +100,18 @@ erpnext.utils.BarcodeScanner = class BarcodeScanner {
 
 				// add new row if new item/batch is scanned
 				row = frappe.model.add_child(this.frm.doc, cur_grid.doctype, this.items_table_name);
+
+				// Mover la nueva fila al principio de la tabla
+                let items = this.frm.doc[this.items_table_name];
+                let last_idx = items.length - 1;
+                if (last_idx > 0) {
+                    items.unshift(items.pop()); // Mover el último elemento al principio
+                    // Reordenar los índices
+                    items.forEach((item, idx) => {
+                        item.idx = idx + 1;
+                    });
+                }
+				
 				// trigger any row add triggers defined on child table.
 				this.frm.script_manager.trigger(`${this.items_table_name}_add`, row.doctype, row.name);
 				this.frm.has_items = false;

@@ -11,6 +11,7 @@
   "item_code",
   "item_name",
   "warehouse",
+  "uom",
   "column_break_6",
   "qty",
   "valuation_rate",
@@ -213,11 +214,20 @@
    "fieldname": "add_serial_batch_bundle",
    "fieldtype": "Button",
    "label": "Add Serial / Batch No"
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "read_only": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2023-11-02 15:47:07.929550",
+ "modified": "2024-09-30 15:56:01.477897",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Reconciliation Item",

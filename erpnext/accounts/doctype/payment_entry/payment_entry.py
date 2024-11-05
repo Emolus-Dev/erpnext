@@ -286,6 +286,7 @@ class PaymentEntry(AccountsController):
 				latest = latest.get(d.payment_term) or latest.get(None)
 				# The reference has already been fully paid
 				if not latest:
+					# frappe.log_error(title="debug", message=d)
 					frappe.throw(
 						_("{0} {1} has already been fully paid.").format(_(d.reference_doctype), d.reference_name)
 					)

@@ -187,6 +187,7 @@
    "fieldtype": "Link",
    "label": "UOM",
    "options": "UOM",
+   "print_hide": 1,
    "reqd": 1
   },
   {
@@ -284,7 +285,8 @@
    "fieldname": "discount_amount",
    "fieldtype": "Currency",
    "label": "Discount Amount",
-   "options": "currency"
+   "options": "currency",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:doc.margin_type && doc.price_list_rate && doc.margin_rate_or_amount",
@@ -645,6 +647,7 @@
    "label": "Rate of Stock UOM",
    "no_copy": 1,
    "options": "currency",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -667,7 +670,7 @@
  "idx": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-14 18:24:24.619832",
+ "modified": "2024-10-02 15:18:39.617574",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Quotation Item",

@@ -44,11 +44,13 @@
    "ignore_user_permissions": 1,
    "in_list_view": 1,
    "label": "Source Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "print_hide": 1
   },
   {
    "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "print_hide": 1
   },
   {
    "fieldname": "item_name",
@@ -60,6 +62,7 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -79,6 +82,7 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Transferred Qty",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -91,7 +95,8 @@
    "default": "0",
    "fieldname": "include_item_in_manufacturing",
    "fieldtype": "Check",
-   "label": "Include Item In Manufacturing"
+   "label": "Include Item In Manufacturing",
+   "print_hide": 1
   },
   {
    "fieldname": "column_break_11",
@@ -104,30 +109,35 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Consumed Qty",
+   "print_hide_if_no_value": 1,
    "read_only": 1
   },
   {
    "fieldname": "available_qty_at_source_warehouse",
    "fieldtype": "Float",
    "label": "Available Qty at Source Warehouse",
+   "print_hide": 1,
    "read_only": 1
   },
   {
    "fieldname": "available_qty_at_wip_warehouse",
    "fieldtype": "Float",
    "label": "Available Qty at WIP Warehouse",
+   "print_hide": 1,
    "read_only": 1
   },
   {
    "fieldname": "rate",
    "fieldtype": "Currency",
    "label": "Rate",
+   "print_hide": 1,
    "read_only": 1
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
    "label": "Amount",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -136,12 +146,13 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Returned Qty ",
+   "print_hide_if_no_value": 1,
    "read_only": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2022-09-28 10:50:43.512562",
+ "modified": "2024-10-28 13:59:56.821675",
  "modified_by": "Administrator",
  "module": "Manufacturing",
  "name": "Work Order Item",

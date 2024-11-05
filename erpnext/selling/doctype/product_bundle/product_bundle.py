@@ -15,9 +15,8 @@ class ProductBundle(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
-		from frappe.types import DF
-
 		from erpnext.selling.doctype.product_bundle_item.product_bundle_item import ProductBundleItem
+		from frappe.types import DF
 
 		description: DF.Data | None
 		disabled: DF.Check

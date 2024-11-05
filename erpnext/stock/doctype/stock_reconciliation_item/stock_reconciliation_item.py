@@ -34,6 +34,7 @@ class StockReconciliationItem(Document):
 		quantity_difference: DF.ReadOnly | None
 		serial_and_batch_bundle: DF.Link | None
 		serial_no: DF.LongText | None
+		uom: DF.Link | None
 		valuation_rate: DF.Currency
 		warehouse: DF.Link
 	# end: auto-generated types

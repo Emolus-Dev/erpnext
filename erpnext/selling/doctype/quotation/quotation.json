@@ -269,6 +269,7 @@
    "label": "Address",
    "oldfieldname": "customer_address",
    "oldfieldtype": "Small Text",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -285,6 +286,7 @@
    "fieldtype": "Small Text",
    "in_global_search": 1,
    "label": "Contact",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -292,6 +294,7 @@
    "fieldtype": "Small Text",
    "label": "Mobile No",
    "options": "Phone",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -677,7 +680,8 @@
    "oldfieldname": "in_words",
    "oldfieldtype": "Data",
    "print_hide": 1,
-   "read_only": 1
+   "read_only": 1,
+   "report_hide": 1
   },
   {
    "fieldname": "base_rounded_total",
@@ -705,6 +709,7 @@
    "oldfieldname": "grand_total_export",
    "oldfieldtype": "Currency",
    "options": "currency",
+   "print_hide": 1,
    "read_only": 1,
    "width": "200px"
   },
@@ -737,6 +742,7 @@
    "oldfieldtype": "Data",
    "print_hide": 1,
    "read_only": 1,
+   "report_hide": 1,
    "width": "200px"
   },
   {
@@ -1073,7 +1079,7 @@
  "idx": 82,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-03 16:21:04.980033",
+ "modified": "2024-08-25 08:42:15.514316",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Quotation",

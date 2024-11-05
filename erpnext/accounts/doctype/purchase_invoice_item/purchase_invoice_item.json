@@ -288,6 +288,7 @@
    "oldfieldname": "import_rate",
    "oldfieldtype": "Currency",
    "options": "currency",
+   "precision": "5",
    "reqd": 1
   },
   {
@@ -299,6 +300,7 @@
    "oldfieldname": "import_amount",
    "oldfieldtype": "Currency",
    "options": "currency",
+   "precision": "5",
    "read_only": 1,
    "reqd": 1
   },
@@ -353,6 +355,7 @@
    "fieldtype": "Currency",
    "label": "Net Rate",
    "options": "currency",
+   "precision": "5",
    "print_hide": 1,
    "read_only": 1
   },
@@ -361,6 +364,7 @@
    "fieldtype": "Currency",
    "label": "Net Amount",
    "options": "currency",
+   "precision": "5",
    "print_hide": 1,
    "read_only": 1
   },
@@ -918,7 +922,7 @@
  "idx": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-25 22:00:28.043555",
+ "modified": "2024-09-30 21:25:38.649278",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Purchase Invoice Item",

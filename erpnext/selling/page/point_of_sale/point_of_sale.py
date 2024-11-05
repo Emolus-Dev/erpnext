@@ -290,29 +290,40 @@ def create_opening_voucher(pos_profile, company, balance_details):
 
 
 @frappe.whitelist()
-def get_past_order_list(search_term, status, limit=20):
+def get_past_order_list(search_term, status, limit=20, currentUser=""):
 	fields = ["name", "grand_total", "currency", "customer", "posting_time", "posting_date"]
 	invoice_list = []
 
 	if search_term and status:
+		if currentUser and currentUser != "Administrator":
+			filters_by_customer = {"customer": ["like", "%{}%".format(search_term)],
+								   "status": status, "owner": currentUser}
+			filters_by_name = {"name": ["like", "%{}%".format(search_term)],
+							   "status": status, "owner": currentUser}
+		else:
+			filters_by_customer = {"customer": ["like", "%{}%".format(search_term)], "status": status}
+			filters_by_name = {"name": ["like", "%{}%".format(search_term)], "status": status}
+
 		invoices_by_customer = frappe.db.get_all(
 			"POS Invoice",
-			filters={"customer": ["like", "%{}%".format(search_term)], "status": status},
+			filters=filters_by_customer,
 			fields=fields,
 			page_length=limit,
 		)
 		invoices_by_name = frappe.db.get_all(
 			"POS Invoice",
-			filters={"name": ["like", "%{}%".format(search_term)], "status": status},
+			filters=filters_by_name,
 			fields=fields,
 			page_length=limit,
 		)
 
 		invoice_list = invoices_by_customer + invoices_by_name
 	elif status:
-		invoice_list = frappe.db.get_all(
-			"POS Invoice", filters={"status": status}, fields=fields, page_length=limit
-		)
+		if currentUser and currentUser != "Administrator":
+			invoice_list = frappe.db.get_all("POS Invoice", filters={"status": status,
+											"owner": currentUser}, fields=fields)
+		else:
+			invoice_list = frappe.db.get_all("POS Invoice", filters={"status": status}, fields=fields)
 
 	return invoice_list
 

@@ -86,12 +86,9 @@ class StockEntry(StockController):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
-		from frappe.types import DF
-
-		from erpnext.stock.doctype.landed_cost_taxes_and_charges.landed_cost_taxes_and_charges import (
-			LandedCostTaxesandCharges,
-		)
+		from erpnext.stock.doctype.landed_cost_taxes_and_charges.landed_cost_taxes_and_charges import LandedCostTaxesandCharges
 		from erpnext.stock.doctype.stock_entry_detail.stock_entry_detail import StockEntryDetail
+		from frappe.types import DF
 
 		add_to_transit: DF.Check
 		additional_costs: DF.Table[LandedCostTaxesandCharges]
@@ -122,16 +119,7 @@ class StockEntry(StockController):
 		project: DF.Link | None
 		purchase_order: DF.Link | None
 		purchase_receipt_no: DF.Link | None
-		purpose: DF.Literal[
-			"Material Issue",
-			"Material Receipt",
-			"Material Transfer",
-			"Material Transfer for Manufacture",
-			"Material Consumption for Manufacture",
-			"Manufacture",
-			"Repack",
-			"Send to Subcontractor",
-		]
+		purpose: DF.Literal["Material Issue", "Material Receipt", "Material Transfer", "Material Transfer for Manufacture", "Material Consumption for Manufacture", "Manufacture", "Repack", "Send to Subcontractor"]
 		remarks: DF.Text | None
 		sales_invoice_no: DF.Link | None
 		scan_barcode: DF.Data | None
