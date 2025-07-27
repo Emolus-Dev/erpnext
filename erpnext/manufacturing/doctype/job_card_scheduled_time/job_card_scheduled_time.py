@@ -14,6 +14,7 @@ class JobCardScheduledTime(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
+		description: DF.SmallText | None
 		from_time: DF.Datetime | None
 		parent: DF.Data
 		parentfield: DF.Data

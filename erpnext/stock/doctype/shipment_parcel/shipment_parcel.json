@@ -5,51 +5,65 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "count",
+  "uom",
+  "weight",
   "length",
   "width",
-  "height",
-  "weight",
-  "count"
+  "height"
  ],
  "fields": [
   {
+   "columns": 2,
    "fieldname": "length",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Length (cm)"
   },
   {
+   "columns": 1,
    "fieldname": "width",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Width (cm)"
   },
   {
+   "columns": 1,
    "fieldname": "height",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Height (cm)"
   },
   {
+   "columns": 2,
    "fieldname": "weight",
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Weight (kg)",
-   "precision": "1",
-   "reqd": 1
+   "precision": "1"
   },
   {
+   "columns": 2,
    "default": "1",
    "fieldname": "count",
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Count",
    "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "reqd": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2024-03-06 16:48:57.355757",
+ "modified": "2025-05-08 15:07:45.961131",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Shipment Parcel",

@@ -147,6 +147,7 @@
    "label": "Description"
   },
   {
+   "fetch_from": "item_code.description",
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description",
@@ -230,12 +231,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
    "oldfieldname": "uom",
    "oldfieldtype": "Link",
    "options": "UOM",
+   "print_hide": 1,
    "reqd": 1
   },
   {
@@ -610,7 +613,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-25 15:58:40.982582",
+ "modified": "2025-02-19 14:22:13.048440",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Entry Detail",

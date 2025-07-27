@@ -21,6 +21,7 @@ class ShipmentParcel(Document):
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
+		uom: DF.Link
 		weight: DF.Float
 		width: DF.Int
 	# end: auto-generated types

@@ -70,12 +70,9 @@ class WorkOrder(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
-		from frappe.types import DF
-
 		from erpnext.manufacturing.doctype.work_order_item.work_order_item import WorkOrderItem
-		from erpnext.manufacturing.doctype.work_order_operation.work_order_operation import (
-			WorkOrderOperation,
-		)
+		from erpnext.manufacturing.doctype.work_order_operation.work_order_operation import WorkOrderOperation
+		from frappe.types import DF
 
 		actual_end_date: DF.Datetime | None
 		actual_operating_cost: DF.Currency
@@ -119,17 +116,7 @@ class WorkOrder(Document):
 		scrap_warehouse: DF.Link | None
 		skip_transfer: DF.Check
 		source_warehouse: DF.Link | None
-		status: DF.Literal[
-			"",
-			"Draft",
-			"Submitted",
-			"Not Started",
-			"In Process",
-			"Completed",
-			"Stopped",
-			"Closed",
-			"Cancelled",
-		]
+		status: DF.Literal["", "Draft", "Submitted", "Not Started", "In Process", "Completed", "Stopped", "Closed", "Cancelled"]
 		stock_uom: DF.Link | None
 		total_operating_cost: DF.Currency
 		transfer_material_against: DF.Literal["", "Work Order", "Job Card"]

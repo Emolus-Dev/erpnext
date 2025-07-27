@@ -135,13 +135,15 @@
    "report_hide": 1
   },
   {
+   "default": "RH-EMP-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Series",
    "no_copy": 1,
    "oldfieldname": "naming_series",
    "oldfieldtype": "Select",
-   "options": "HR-EMP-",
+   "options": "RH-EMP-\nRH-MAC-",
+   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -206,7 +208,7 @@
    "reqd": 1
   },
   {
-   "default": "Active",
+   "default": "Inactive",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
@@ -219,6 +221,7 @@
   {
    "fieldname": "employee_number",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_global_search": 1,
    "label": "Employee Number",
    "oldfieldname": "employee_number",
@@ -274,7 +277,6 @@
    "label": "Relation"
   },
   {
-   "collapsible": 1,
    "fieldname": "erpnext_user",
    "fieldtype": "Section Break",
    "label": "User Details"
@@ -354,17 +356,18 @@
    "label": "Department",
    "oldfieldname": "department",
    "oldfieldtype": "Link",
-   "options": "Department"
+   "options": "Department",
+   "reqd": 1
   },
   {
    "fieldname": "designation",
    "fieldtype": "Link",
    "in_global_search": 1,
-   "in_list_view": 1,
    "label": "Designation",
    "oldfieldname": "designation",
    "oldfieldtype": "Link",
    "options": "Designation",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -382,7 +385,8 @@
    "label": "Branch",
    "oldfieldname": "branch",
    "oldfieldtype": "Link",
-   "options": "Branch"
+   "options": "Branch",
+   "reqd": 1
   },
   {
    "description": "Applicable Holiday List",
@@ -514,7 +518,9 @@
   {
    "fieldname": "passport_number",
    "fieldtype": "Data",
-   "label": "Passport Number"
+   "in_list_view": 1,
+   "label": "Passport Number",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_issue",
@@ -527,9 +533,11 @@
    "label": "Valid Upto"
   },
   {
+   "default": "Registro Nacional de las Personas",
    "fieldname": "place_of_issue",
    "fieldtype": "Data",
-   "label": "Place of Issue"
+   "label": "Place of Issue",
+   "reqd": 1
   },
   {
    "fieldname": "column_break6",
@@ -540,7 +548,8 @@
    "fieldname": "marital_status",
    "fieldtype": "Select",
    "label": "Marital Status",
-   "options": "\nSingle\nMarried\nDivorced\nWidowed"
+   "options": "Single\nMarried\nJoined",
+   "reqd": 1
   },
   {
    "fieldname": "blood_group",
@@ -616,7 +625,6 @@
    "fieldname": "relieving_date",
    "fieldtype": "Date",
    "label": "Relieving Date",
-   "mandatory_depends_on": "eval:doc.status == \"Left\"",
    "no_copy": 1,
    "oldfieldname": "relieving_date",
    "oldfieldtype": "Date"
@@ -824,52 +832,19 @@
  "image_field": "image",
  "is_tree": 1,
  "links": [],
- "modified": "2024-01-03 17:36:20.984421",
+ "modified": "2025-07-21 14:23:20.340828",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Employee",
  "naming_rule": "By \"Naming Series\" field",
  "nsm_parent_field": "reports_to",
  "owner": "Administrator",
- "permissions": [
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Employee"
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "import": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "HR User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "import": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "HR Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "search_fields": "employee_name",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "employee_name"
+ "title_field": "employee_name",
+ "track_changes": 1
 }

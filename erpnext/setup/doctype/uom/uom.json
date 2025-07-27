@@ -39,8 +39,19 @@
  ],
  "icon": "fa fa-compass",
  "idx": 1,
- "links": [],
- "modified": "2021-10-18 14:07:43.722144",
+ "links": [
+  {
+   "group": "Conversion",
+   "link_doctype": "UOM Conversion Factor",
+   "link_fieldname": "from_uom"
+  },
+  {
+   "group": "Conversion",
+   "link_doctype": "UOM Conversion Factor",
+   "link_fieldname": "to_uom"
+  }
+ ],
+ "modified": "2025-06-23 09:38:12.422372",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "UOM",
@@ -78,5 +89,6 @@
  "quick_entry": 1,
  "show_name_in_global_search": 1,
  "sort_field": "modified",
- "sort_order": "ASC"
+ "sort_order": "ASC",
+ "states": []
 }

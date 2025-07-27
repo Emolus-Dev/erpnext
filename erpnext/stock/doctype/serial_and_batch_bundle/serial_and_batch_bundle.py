@@ -450,14 +450,41 @@ class SerialandBatchBundle(Document):
 			self.posting_date, self.posting_time
 		)
 
+		# ORIGINAL
+		# future_entries = (
+		# 	frappe.qb.from_(parent)
+		# 	.inner_join(child)
+		# 	.on(parent.name == child.parent)
+		# 	.select(
+		# 		child.serial_no,
+		# 		parent.voucher_type,
+		# 		parent.voucher_no,
+		# 	)
+		# 	.where(
+		# 		(child.serial_no.isin(serial_nos))
+		# 		& (child.parent != self.name)
+		# 		& (parent.item_code == self.item_code)
+		# 		& (parent.docstatus == 1)
+		# 		& (parent.is_cancelled == 0)
+		# 		& (parent.type_of_transaction.isin(["Inward", "Outward"]))
+		# 	)
+		# 	.where(timestamp_condition)
+		# ).run(as_dict=True)
+
+		# PROPUESTA 1
+		serial_no_table = frappe.qb.DocType("Serial No")
 		future_entries = (
 			frappe.qb.from_(parent)
 			.inner_join(child)
 			.on(parent.name == child.parent)
+			.inner_join(serial_no_table)
+			.on(child.serial_no == serial_no_table.name)
 			.select(
 				child.serial_no,
 				parent.voucher_type,
 				parent.voucher_no,
+				parent.company,
+				serial_no_table.company.as_("serial_company")
 			)
 			.where(
 				(child.serial_no.isin(serial_nos))
@@ -466,9 +493,14 @@ class SerialandBatchBundle(Document):
 				& (parent.docstatus == 1)
 				& (parent.is_cancelled == 0)
 				& (parent.type_of_transaction.isin(["Inward", "Outward"]))
+				& (serial_no_table.company == self.company)
+				& (parent.company == self.company)
+				& (parent.warehouse == child.warehouse)
 			)
 			.where(timestamp_condition)
 		).run(as_dict=True)
+
+		frappe.log_error("test", f"Debugging: Found {len(future_entries)} future entries {future_entries}")
 
 		if future_entries:
 			msg = """The serial nos has been used in the future

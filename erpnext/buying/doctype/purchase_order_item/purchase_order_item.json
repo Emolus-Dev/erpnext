@@ -228,6 +228,7 @@
    "oldfieldname": "stock_uom",
    "oldfieldtype": "Data",
    "options": "UOM",
+   "print_hide": 1,
    "print_width": "100px",
    "read_only": 1,
    "reqd": 1,
@@ -247,6 +248,7 @@
    "oldfieldname": "uom",
    "oldfieldtype": "Link",
    "options": "UOM",
+   "print_hide": 1,
    "print_width": "100px",
    "reqd": 1
   },
@@ -271,6 +273,7 @@
    "fieldtype": "Currency",
    "label": "Price List Rate",
    "options": "currency",
+   "precision": "4",
    "print_hide": 1
   },
   {
@@ -874,7 +877,8 @@
    "fieldname": "fg_item_qty",
    "fieldtype": "Float",
    "label": "Finished Good Qty",
-   "mandatory_depends_on": "eval:parent.is_subcontracted && !parent.is_old_subcontracting_flow"
+   "mandatory_depends_on": "eval:parent.is_subcontracted && !parent.is_old_subcontracting_flow",
+   "print_hide": 1
   },
   {
    "depends_on": "eval:parent.is_internal_supplier",
@@ -915,7 +919,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-05 11:23:24.859435",
+ "modified": "2025-06-12 10:11:12.185303",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order Item",

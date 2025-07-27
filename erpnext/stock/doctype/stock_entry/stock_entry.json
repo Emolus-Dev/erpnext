@@ -697,7 +697,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-13 19:05:42.386955",
+ "modified": "2025-06-10 12:43:14.216586",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Entry",
@@ -768,6 +768,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "stock_entry_type",
- "track_changes": 1
+ "track_changes": 1,
+ "translated_doctype": 1
 }
