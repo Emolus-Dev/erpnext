@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
+ "allow_rename": 1,
  "creation": "2023-05-29 13:02:17.121296",
  "description": "A logical Warehouse against which stock entries are made.",
  "doctype": "DocType",
@@ -259,11 +260,12 @@
    "label": "Is Rejected Warehouse"
   }
  ],
+ "grid_page_length": 50,
  "icon": "fa fa-building",
  "idx": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-14 16:08:15.733597",
+ "modified": "2025-06-16 10:31:28.086992",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Warehouse",
@@ -316,6 +318,7 @@
    "role": "Manufacturing User"
   }
  ],
+ "row_format": "Dynamic",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

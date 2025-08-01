@@ -285,10 +285,12 @@ class SerialandBatchBundle(Document):
 		available_serial_nos = get_available_serial_nos(kwargs)
 		for data in available_serial_nos:
 			if data.serial_no in serial_nos:
-				self.throw_error_message(
-					f"Serial No {bold(data.serial_no)} is already present in the warehouse {bold(data.warehouse)}.",
-					SerialNoDuplicateError,
-				)
+				serial_company = frappe.db.get_value("Serial No", data.serial_no, "company")
+				if serial_company == self.company:
+					self.throw_error_message(
+						f"Serial No {bold(data.serial_no)} is already present in the warehouse {bold(data.warehouse)} for company {bold(serial_company)}.",
+						SerialNoDuplicateError,
+					)
 
 	def throw_error_message(self, message, exception=frappe.ValidationError):
 		frappe.throw(_(message), exception, title=_("Error"))
@@ -689,6 +691,7 @@ class SerialandBatchBundle(Document):
 				& (parent.docstatus == 1)
 				& (parent.is_cancelled == 0)
 				& (parent.type_of_transaction.isin(["Inward", "Outward"]))
+				& (parent.company == self.company)
 			)
 			.where(timestamp_condition)
 		).run(as_dict=True)
@@ -890,7 +893,7 @@ class SerialandBatchBundle(Document):
 	def validate_incorrect_serial_nos(self, serial_nos):
 		incorrect_serial_nos = frappe.get_all(
 			"Serial No",
-			filters={"name": ("in", serial_nos), "item_code": ("!=", self.item_code)},
+			filters={"name": ("in", serial_nos), "item_code": ("!=", self.item_code), "company": self.company },
 			fields=["name"],
 		)
 
