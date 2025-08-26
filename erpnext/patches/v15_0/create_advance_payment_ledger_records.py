@@ -57,7 +57,15 @@ def get_journals_with_so_po_reference() -> list:
 
 def make_advance_ledger_entries(vouchers: list):
 	for x in vouchers:
-		frappe.get_doc(x.doctype, x.name).make_advance_payment_ledger_entries()
+		try:
+			doc = frappe.get_doc(x.doctype, x.name)
+			doc.make_advance_payment_ledger_entries()
+		except frappe.DoesNotExistError:
+			frappe.log_error(f"Documento {x.doctype} {x.name} no encontrado, omitiendo...", "Advance Payment Ledger Patch")
+		except frappe.LinkValidationError as e:
+			frappe.log_error(f"Error de validación de enlace en {x.doctype} {x.name}: {str(e)}", "Advance Payment Ledger Patch")
+		except Exception as e:
+			frappe.log_error(f"Error inesperado procesando {x.doctype} {x.name}: {str(e)}", "Advance Payment Ledger Patch")
 
 
 def execute():

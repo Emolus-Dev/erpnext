@@ -95,6 +95,7 @@
    "oldfieldname": "item_code",
    "oldfieldtype": "Link",
    "options": "Item",
+   "print_hide": 1,
    "print_width": "150px",
    "search_index": 1,
    "width": "150px"
@@ -191,6 +192,7 @@
    "fieldtype": "Link",
    "label": "UOM",
    "options": "UOM",
+   "print_hide": 1,
    "reqd": 1
   },
   {
@@ -288,7 +290,8 @@
    "fieldname": "discount_amount",
    "fieldtype": "Currency",
    "label": "Discount Amount",
-   "options": "currency"
+   "options": "currency",
+   "print_hide_if_no_value": 1
   },
   {
    "depends_on": "eval:doc.margin_type && doc.price_list_rate && doc.margin_rate_or_amount",
@@ -651,6 +654,7 @@
    "label": "Rate of Stock UOM",
    "no_copy": 1,
    "options": "currency",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -673,7 +677,8 @@
    "fieldname": "distributed_discount_amount",
    "fieldtype": "Currency",
    "label": "Distributed Discount Amount",
-   "options": "currency"
+   "options": "currency",
+   "print_hide": 1
   },
   {
    "fieldname": "available_quantity_section",
@@ -698,12 +703,13 @@
  "idx": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-12 13:49:18.765883",
+ "modified": "2025-08-17 18:52:48.429362",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Quotation Item",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

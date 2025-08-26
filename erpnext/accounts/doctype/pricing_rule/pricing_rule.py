@@ -436,14 +436,20 @@ def get_pricing_rule_for_item(args, doc=None, for_validate=False):
 		if for_validate and args.get("pricing_rules")
 		else get_pricing_rules(args, doc)
 	)
+	# pricing_rule_names = [r.get("pricing_rule") for r in get_pricing_rules(args, doc)]
+	# pricing_rules = [frappe.get_doc("Pricing Rule", name) for name in pricing_rule_names if name]
+
 
 	if pricing_rules:
 		rules = []
 
+
 		for pricing_rule in pricing_rules:
 			if not pricing_rule:
 				continue
-
+			
+			
+   
 			if isinstance(pricing_rule, str):
 				pricing_rule = frappe.get_cached_doc("Pricing Rule", pricing_rule)
 				update_pricing_rule_uom(pricing_rule, args)
@@ -451,7 +457,8 @@ def get_pricing_rule_for_item(args, doc=None, for_validate=False):
 				pricing_rule.apply_rule_on_other_items = (
 					get_pricing_rule_items(pricing_rule, other_items=fetch_other_item) or []
 				)
-
+			
+   
 			if pricing_rule.coupon_code_based == 1:
 				if not args.coupon_code:
 					continue
