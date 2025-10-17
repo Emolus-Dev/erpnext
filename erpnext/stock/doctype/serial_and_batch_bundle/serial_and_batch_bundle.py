@@ -268,6 +268,14 @@ class SerialandBatchBundle(Document):
 					f"Serial No {bold(serial_no)} is not present in the warehouse {bold(self.warehouse)}.",
 					SerialNoWarehouseError,
 				)
+			serial_no_warehouse[data.serial_no] = data.warehouse
+
+		for serial_no in serial_nos:
+			if not serial_no_warehouse.get(serial_no) or serial_no_warehouse.get(serial_no) != self.warehouse:
+				self.throw_error_message(
+					f"Serial No {bold(serial_no)} is not present in the warehouse {bold(self.warehouse)}.",
+					SerialNoWarehouseError,
+				)
 
 	def validate_serial_nos_duplicate(self):
 		# Don't inward same serial number multiple times
@@ -789,25 +797,53 @@ class SerialandBatchBundle(Document):
 			self.posting_date, self.posting_time
 		)
 
+		# future_entries = (
+		# 	frappe.qb.from_(parent)
+		# 	.inner_join(child)
+		# 	.on(parent.name == child.parent)
+		# 	.select(
+		# 		child.serial_no,
+		# 		child.batch_no,
+		# 		parent.voucher_type,
+		# 		parent.voucher_no,
+		# 	)
+		# 	.where(
+		# 		(child.parent != self.name)
+		# 		& (parent.item_code == self.item_code)
+		# 		& (parent.docstatus == 1)
+		# 		& (parent.is_cancelled == 0)
+		# 		& (parent.type_of_transaction.isin(["Inward", "Outward"]))
+		# 	)
+		# 	.where(timestamp_condition)
+		# )
+
+		serial_no_table = frappe.qb.DocType("Serial No")
 		future_entries = (
 			frappe.qb.from_(parent)
 			.inner_join(child)
 			.on(parent.name == child.parent)
+			.inner_join(serial_no_table)
+			.on(child.serial_no == serial_no_table.name)
 			.select(
 				child.serial_no,
-				child.batch_no,
 				parent.voucher_type,
 				parent.voucher_no,
+				parent.company,
+				serial_no_table.company.as_("serial_company")
 			)
 			.where(
-				(child.parent != self.name)
+				(child.serial_no.isin(serial_nos))
+				& (child.parent != self.name)
 				& (parent.item_code == self.item_code)
 				& (parent.docstatus == 1)
 				& (parent.is_cancelled == 0)
 				& (parent.type_of_transaction.isin(["Inward", "Outward"]))
+				& (serial_no_table.company == self.company)
+				& (parent.company == self.company)
+				& (parent.warehouse == child.warehouse)
 			)
 			.where(timestamp_condition)
-		)
+		).run(as_dict=True)
 
 		if self.has_batch_no and not self.has_serial_no:
 			future_entries = future_entries.where(parent.voucher_type == "Stock Reconciliation")
@@ -1090,7 +1126,8 @@ class SerialandBatchBundle(Document):
 	def validate_incorrect_serial_nos(self, serial_nos):
 		incorrect_serial_nos = frappe.get_all(
 			"Serial No",
-			filters={"name": ("in", serial_nos), "item_code": ("!=", self.item_code)},
+			# filters={"name": ("in", serial_nos), "item_code": ("!=", self.item_code)},
+			filters={"name": ("in", serial_nos), "item_code": ("!=", self.item_code), "company": self.company },
 			fields=["name"],
 		)
 
