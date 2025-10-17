@@ -1,0 +1,2900 @@
+{
+    "country_code": "gt",
+    "name": "GT Emolus Standard",
+    "tree": {
+        "ACTIVOS": {
+            "account_number": "1",
+            "root_type": "Asset",
+            "ACTIVO CORRIENTE": {
+                "account_number": "1.01",
+                "root_type": "Asset",
+                "CAJA Y BANCOS": {
+                    "account_number": "1.01.01",
+                    "root_type": "Asset",
+                    "CAJA": {
+                        "account_number": "1.01.01.01",
+                        "root_type": "Asset",
+                        "Caja General": {
+                            "account_number": "1.01.01.01.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Caja Chica": {
+                            "account_number": "1.01.01.01.002",
+                            "root_type": "Asset",
+                            "account_type": "Cash",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "CAJA EN SUCURSALES": {
+                        "account_number": "1.01.01.02",
+                        "root_type": "Asset"
+                    },
+                    "BANCOS NACIONALES": {
+                        "account_number": "1.01.01.03",
+                        "root_type": "Asset",
+                        "Banco Industrial Cuenta Monetaria GTQ": {
+                            "account_number": "1.01.01.03.001",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Promerica, S.A.": {
+                            "account_number": "1.01.01.03.002",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco de América Central, S.A.": {
+                            "account_number": "1.01.01.03.003",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Internacional, S.A.": {
+                            "account_number": "1.01.01.03.004",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Ficohsa Guatemala, S.A.": {
+                            "account_number": "1.01.01.03.005",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco de Antigua, S.A.": {
+                            "account_number": "1.01.01.03.006",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Agromercantil de Guatemala, S.A.": {
+                            "account_number": "1.01.01.03.007",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco G&T Continental, S.A.": {
+                            "account_number": "1.01.01.03.008",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Azteca de Guatemala, S.A.": {
+                            "account_number": "1.01.01.03.009",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco INV, S.A.": {
+                            "account_number": "1.01.01.03.010",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Credicorp, S.A.": {
+                            "account_number": "1.01.01.03.011",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco de los Trabajadores": {
+                            "account_number": "1.01.01.03.012",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Inmobiliario, S.A.": {
+                            "account_number": "1.01.01.03.013",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco Crédito Hipotecario Nacional de Guatemala": {
+                            "account_number": "1.01.01.03.014",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Banco de Desarrollo Rural, S.A.": {
+                            "account_number": "1.01.01.03.015",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Citibank, N.A., Sucursal Guatemala": {
+                            "account_number": "1.01.01.03.016",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        },
+                        "Vivibanco, S.A.": {
+                            "account_number": "1.01.01.03.017",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "BANCOS DEL EXTERIOR": {
+                        "account_number": "1.01.01.04",
+                        "root_type": "Asset",
+                        "Bank of America": {
+                            "account_number": "1.01.01.04.001",
+                            "root_type": "Asset",
+                            "account_type": "Bank",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "PROCESADORAS DE PAGO": {
+                        "account_number": "1.01.01.05",
+                        "root_type": "Asset",
+                        "BAC Credomatic": {
+                            "account_number": "1.01.01.05.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "NeoNet Guatemala": {
+                            "account_number": "1.01.01.05.002",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "CUENTAS POR COBRAR": {
+                    "account_number": "1.01.02",
+                    "root_type": "Asset",
+                    "CUENTAS POR COBRAR LOCALES": {
+                        "account_number": "1.01.02.01",
+                        "root_type": "Asset",
+                        "Clientes Nacionales": {
+                            "account_number": "1.01.02.01.001",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Clientes Nacionales Moneda Extranjera": {
+                            "account_number": "1.01.02.01.002",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "USD"
+                        },
+                        "Estimación para Cuentas Incobrables": {
+                            "account_number": "1.01.02.01.003",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Documentos por Cobrar": {
+                            "account_number": "1.01.02.01.004",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Crédito por Cobrar": {
+                            "account_number": "1.01.02.01.005",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Otras cuentas por Cobrar": {
+                            "account_number": "1.01.02.01.006",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "CUENTAS POR COBRAR DEL EXTERIOR": {
+                        "account_number": "1.01.02.02",
+                        "root_type": "Asset",
+                        "Clientes del Exterior": {
+                            "account_number": "1.01.02.02.001",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Clientes del Exterior Moneda Extranjera": {
+                            "account_number": "1.01.02.02.002",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Estimación para Cuentas Incobrables": {
+                            "account_number": "1.01.02.02.003",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Documentos por Cobrar": {
+                            "account_number": "1.01.02.02.004",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Crédito por Cobrar": {
+                            "account_number": "1.01.02.02.005",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        },
+                        "Otras cuentas por Cobrar": {
+                            "account_number": "1.01.02.02.006",
+                            "root_type": "Asset",
+                            "account_type": "Receivable",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "INVENTARIO": {
+                    "account_number": "1.01.03",
+                    "root_type": "Asset",
+                    "INVENTARIO DE MATERIA PRIMA": {
+                        "account_number": "1.01.03.01",
+                        "root_type": "Asset",
+                        "Inventario en Bodega de Materia Prima": {
+                            "account_number": "1.01.03.01.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "INVENTARIO EN PROCESO": {
+                        "account_number": "1.01.03.02",
+                        "root_type": "Asset",
+                        "Inventario de Producto en Proceso": {
+                            "account_number": "1.01.03.02.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "INVENTARIO EN TRÁNSITO": {
+                        "account_number": "1.01.03.03",
+                        "root_type": "Asset",
+                        "Inventario en Bodega de Tránsito": {
+                            "account_number": "1.01.03.03.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "INVENTARIO DE PRODUCTO TERMINADO": {
+                        "account_number": "1.01.03.04",
+                        "root_type": "Asset",
+                        "Inventario en Bodega Principal de Producto Terminado ": {
+                            "account_number": "1.01.03.04.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "INVENTARIO EN SUCURSALES": {
+                        "account_number": "1.01.03.05",
+                        "root_type": "Asset",
+                        "Inventario en Sucursal": {
+                            "account_number": "1.01.03.05.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "INVENTARIO EN CONSIGNACIÓN": {
+                        "account_number": "1.01.03.06",
+                        "root_type": "Asset",
+                        "Inventario en Consignación Cliente": {
+                            "account_number": "1.01.03.06.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "INVENTARIO REPUESTOS Y ACCESORIOS": {
+                        "account_number": "1.01.03.07",
+                        "root_type": "Asset",
+                        "Inventario en Bodega de Repuestos": {
+                            "account_number": "1.01.03.07.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "INVENTARIO PARA MAQUILA": {
+                        "account_number": "1.01.03.08",
+                        "root_type": "Asset",
+                        "Inventario en Bodega para Maquila": {
+                            "account_number": "1.01.03.08.001",
+                            "root_type": "Asset",
+                            "account_type": "Stock",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "IMPUESTOS": {
+                    "account_number": "1.01.04",
+                    "root_type": "Asset",
+                    "CRÉDITO FISCAL": {
+                        "account_number": "1.01.04.01",
+                        "root_type": "Asset",
+                        "IVA Crédito Fiscal": {
+                            "account_number": "1.01.04.01.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA por cobrar": {
+                            "account_number": "1.01.04.01.002",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA Retenciones por Compensar": {
+                            "account_number": "1.01.04.01.003",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA Importaciones": {
+                            "account_number": "1.01.04.01.004",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA FYDUCA": {
+                            "account_number": "1.01.04.01.005",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA FAUCA": {
+                            "account_number": "1.01.04.01.006",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA Excensiones": {
+                            "account_number": "1.01.04.01.007",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA Factura Especial": {
+                            "account_number": "1.01.04.01.008",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ISR": {
+                        "account_number": "1.01.04.02",
+                        "root_type": "Asset",
+                        "Impuesto sobre la Renta": {
+                            "account_number": "1.01.04.02.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Trimestral": {
+                            "account_number": "1.01.04.02.002",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "5% Sobre Ventas": {
+                            "account_number": "1.01.04.02.003",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR por Cobrar": {
+                            "account_number": "1.01.04.02.004",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR por Cobrar Empleados": {
+                            "account_number": "1.01.04.02.005",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Retenciones": {
+                            "account_number": "1.01.04.02.006",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Retenciones No Domicialiados": {
+                            "account_number": "1.01.04.02.007",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS IMPUESTOS POR COBRAR": {
+                        "account_number": "1.01.04.03",
+                        "root_type": "Asset",
+                        "Impuesto de Solidaridad - ISO": {
+                            "account_number": "1.01.04.03.001",
+                            "root_type": "Asset",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "INVERSIONES": {
+                    "account_number": "1.01.05",
+                    "root_type": "Asset"
+                }
+            },
+            "ACTIVO NO CORRIENTE": {
+                "account_number": "1.02",
+                "root_type": "Asset",
+                "ACTIVOS FIJOS": {
+                    "account_number": "1.02.01",
+                    "root_type": "Asset",
+                    "ACTIVOS FIJOS TANGIBLES": {
+                        "account_number": "1.02.01.01",
+                        "root_type": "Asset",
+                        "Equipo Computo": {
+                            "account_number": "1.02.01.01.001",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Herramientas": {
+                            "account_number": "1.02.01.01.002",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Inmuebles": {
+                            "account_number": "1.02.01.01.003",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Maquinaria": {
+                            "account_number": "1.02.01.01.004",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Mobiliario y Equipo": {
+                            "account_number": "1.02.01.01.005",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Vehículos": {
+                            "account_number": "1.02.01.01.006",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros Activos": {
+                            "account_number": "1.02.01.01.007",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ACTIVOS FIJOS INTANGIBLES": {
+                        "account_number": "1.02.01.02",
+                        "root_type": "Asset",
+                        "Dominio de internet": {
+                            "account_number": "1.02.01.02.001",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Software": {
+                            "account_number": "1.02.01.02.002",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Marcas": {
+                            "account_number": "1.02.01.02.003",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Patentes": {
+                            "account_number": "1.02.01.02.004",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Derecho de Llave": {
+                            "account_number": "1.02.01.02.005",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros Activos Fijos Intangibles": {
+                            "account_number": "1.02.01.02.006",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "DEPRECIACIONES DE ACTIVOS FIJOS": {
+                    "account_number": "1.02.02",
+                    "root_type": "Asset",
+                    "DEPRECIACIONES DE ACTIVOS FIJOS TANGIBLES": {
+                        "account_number": "1.02.02.01",
+                        "root_type": "Asset",
+                        "Equipo Computo": {
+                            "account_number": "1.02.02.01.001",
+                            "root_type": "Asset",
+                            "account_type": "Accumulated Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Herramientas": {
+                            "account_number": "1.02.02.01.002",
+                            "root_type": "Asset",
+                            "account_type": "Accumulated Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Inmuebles": {
+                            "account_number": "1.02.02.01.003",
+                            "root_type": "Asset",
+                            "account_type": "Accumulated Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Maquinaria": {
+                            "account_number": "1.02.02.01.004",
+                            "root_type": "Asset",
+                            "account_type": "Accumulated Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Mobiliario y Equipo": {
+                            "account_number": "1.02.02.01.005",
+                            "root_type": "Asset",
+                            "account_type": "Accumulated Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Vehículos": {
+                            "account_number": "1.02.02.01.006",
+                            "root_type": "Asset",
+                            "account_type": "Accumulated Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros Activos": {
+                            "account_number": "1.02.02.01.007",
+                            "root_type": "Asset",
+                            "account_type": "Accumulated Depreciation",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "DEPRECIACIONES DE ACTIVOS FIJOS INTANGIBLES": {
+                        "account_number": "1.02.02.02",
+                        "root_type": "Asset",
+                        "Derecho de Llave": {
+                            "account_number": "1.02.02.02.001",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Dominio de internet": {
+                            "account_number": "1.02.02.02.002",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Software": {
+                            "account_number": "1.02.02.02.003",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Marcas y Patentes": {
+                            "account_number": "1.02.02.02.004",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros Activos Fijos Intangibles": {
+                            "account_number": "1.02.02.02.005",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "ACTIVOS EN PROCESO": {
+                    "account_number": "1.02.03",
+                    "root_type": "Asset",
+                    "CONTRUCCIONES EN PROCESO": {
+                        "account_number": "1.02.03.01",
+                        "root_type": "Asset",
+                        "Inmuebles en Proceso": {
+                            "account_number": "1.02.03.01.001",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Construcciones en Proceso": {
+                            "account_number": "1.02.03.01.002",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        },
+                        "Capital en Proceso": {
+                            "account_number": "1.02.03.01.003",
+                            "root_type": "Asset",
+                            "account_type": "Fixed Asset",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            },
+            "ACTIVO DIFERIDO": {
+                "account_number": "1.03",
+                "root_type": "Asset",
+                "CUENTAS POR COBRAR DIFERIDO": {
+                    "account_number": "1.03.01",
+                    "root_type": "Asset",
+                    "ANTICIPOS NACIONALES": {
+                        "account_number": "1.03.01.01",
+                        "root_type": "Asset",
+                        "Anticipos a proveedores": {
+                            "account_number": "1.03.01.01.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Anticipos a acreedores": {
+                            "account_number": "1.03.01.01.002",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "USD"
+                        }
+                    },
+                    "ANTICIPOS AL EXTERIOR": {
+                        "account_number": "1.03.01.02",
+                        "root_type": "Asset",
+                        "Anticipos a proveedores del exterior Moneda Extranjera": {
+                            "account_number": "1.03.01.02.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "USD"
+                        },
+                        "Anticipos a acreedores del exterior Moneda Extranjera": {
+                            "account_number": "1.03.01.02.002",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "USD"
+                        }
+                    },
+                    "ANTICIPOS A EMPLEADOS": {
+                        "account_number": "1.03.01.03",
+                        "root_type": "Asset",
+                        "Anticipos a Empleados": {
+                            "account_number": "1.03.01.03.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Anticipos de Gastos a Empleados": {
+                            "account_number": "1.03.01.03.002",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS ANTICIPOS": {
+                        "account_number": "1.03.01.04",
+                        "root_type": "Asset",
+                        "Depositos de Rentas": {
+                            "account_number": "1.03.01.04.001",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Ganancias y Pérdidas no realizadas": {
+                            "account_number": "1.03.01.04.002",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos anticipados o cuentas por liquidar": {
+                            "account_number": "1.03.01.04.003",
+                            "root_type": "Asset",
+                            "account_type": "Chargeable",
+                            "account_currency": "GTQ"
+                        },
+                        "Habilitaciones y autorizaciones": {
+                            "account_number": "1.03.01.04.004",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Marcas y Patentes": {
+                            "account_number": "1.03.01.04.005",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Inscripciones": {
+                            "account_number": "1.03.01.04.006",
+                            "root_type": "Asset",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros prestamos": {
+                            "account_number": "1.03.01.04.007",
+                            "root_type": "Asset",
+                            "account_type": "Chargeable",
+                            "account_currency": "GTQ"
+                        },
+                        "Prestamos a empleados": {
+                            "account_number": "1.03.01.04.008",
+                            "root_type": "Asset",
+                            "account_type": "Chargeable",
+                            "account_currency": "GTQ"
+                        },
+                        "Rentas Anticipadas": {
+                            "account_number": "1.03.01.04.009",
+                            "root_type": "Asset",
+                            "account_type": "Chargeable",
+                            "account_currency": "GTQ"
+                        },
+                        "SEGUROS PAGADOS ANTICIPADAMENTE": {
+                            "account_number": "1.03.01.04.010",
+                            "root_type": "Asset"
+                        }
+                    }
+                }
+            }
+        },
+        "PASIVOS": {
+            "account_number": "2",
+            "root_type": "Liability",
+            "PASIVO CORRIENTE": {
+                "account_number": "2.0099999999999998",
+                "root_type": "Liability",
+                "PROVEEDORES Y ACREEDORES": {
+                    "account_number": "2.01.01",
+                    "root_type": "Liability",
+                    "PROVEEDORES": {
+                        "account_number": "2.01.01.01",
+                        "root_type": "Liability",
+                        "Proveedores Nacionales": {
+                            "account_number": "2.01.01.01.001",
+                            "root_type": "Liability",
+                            "account_type": "Payable",
+                            "account_currency": "GTQ"
+                        },
+                        "Inventario recibido no facturado": {
+                            "account_number": "2.01.01.01.002",
+                            "root_type": "Liability",
+                            "account_type": "Stock Received But Not Billed",
+                            "account_currency": "GTQ"
+                        },
+                        "Proveedores Nacionales Moneda Extranjera": {
+                            "account_number": "2.01.01.01.003",
+                            "root_type": "Liability",
+                            "account_type": "Payable",
+                            "account_currency": "USD"
+                        },
+                        "Inventario recibido no facturado Moneda Extranjera": {
+                            "account_number": "2.01.01.01.004",
+                            "root_type": "Liability",
+                            "account_type": "Stock Received But Not Billed",
+                            "account_currency": "USD"
+                        },
+                        "Proveedores del Exterior Moneda Extranjera": {
+                            "account_number": "2.01.01.01.005",
+                            "root_type": "Liability",
+                            "account_type": "Payable",
+                            "account_currency": "USD"
+                        }
+                    },
+                    "ACREEDORES": {
+                        "account_number": "2.01.01.02",
+                        "root_type": "Liability",
+                        "Acreedores Nacionales": {
+                            "account_number": "2.01.01.02.001",
+                            "root_type": "Liability",
+                            "account_type": "Payable",
+                            "account_currency": "GTQ"
+                        },
+                        "Activos Fijos No facturados": {
+                            "account_number": "2.01.01.02.002",
+                            "root_type": "Liability",
+                            "account_type": "Asset Received But Not Billed",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicio recibido no facturado": {
+                            "account_number": "2.01.01.02.003",
+                            "root_type": "Liability",
+                            "account_type": "Service Received But Not Billed",
+                            "account_currency": "GTQ"
+                        },
+                        "Acreedores Locales Moneda Extranjera": {
+                            "account_number": "2.01.01.02.004",
+                            "root_type": "Liability",
+                            "account_type": "Payable",
+                            "account_currency": "USD"
+                        },
+                        "Acreedores Moneda Extranjera": {
+                            "account_number": "2.01.01.02.005",
+                            "root_type": "Liability",
+                            "account_type": "Payable",
+                            "account_currency": "USD"
+                        }
+                    }
+                },
+                "OBLIGACIONES LABORALES": {
+                    "account_number": "2.01.02",
+                    "root_type": "Liability",
+                    "SUELDOS Y PRESTACIONES": {
+                        "account_number": "2.01.02.01",
+                        "root_type": "Liability",
+                        "Sueldos por Pagar": {
+                            "account_number": "2.01.02.01.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "HORAS EXTRAS (OBLIGACIONES)": {
+                        "account_number": "2.01.02.02",
+                        "root_type": "Liability",
+                        "Horas Extras": {
+                            "account_number": "2.01.02.02.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "BONIFICACIONES (OBLIGACIONES)": {
+                        "account_number": "2.01.02.03",
+                        "root_type": "Liability",
+                        "Bonificación Decreto 37-2001": {
+                            "account_number": "2.01.02.03.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Bonificación Productividad": {
+                            "account_number": "2.01.02.03.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "DESCUENTOS LABOLARES": {
+                        "account_number": "2.01.02.04",
+                        "root_type": "Liability",
+                        "Descuentos Judiciales": {
+                            "account_number": "2.01.02.04.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Descuentos a Empleados por Pagar": {
+                            "account_number": "2.01.02.04.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Descuentos Uniformes": {
+                            "account_number": "2.01.02.04.003",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Descuentos Varios": {
+                            "account_number": "2.01.02.04.004",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "PRESTACIONES": {
+                        "account_number": "2.01.02.05",
+                        "root_type": "Liability",
+                        "IGSS Cuota Patronal": {
+                            "account_number": "2.01.02.05.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "IGSS Cuota Empleado": {
+                            "account_number": "2.01.02.05.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Provision de Vacaciones": {
+                            "account_number": "2.01.02.05.003",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Cuota IRTRA": {
+                            "account_number": "2.01.02.05.004",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Cuota INTECAP": {
+                            "account_number": "2.01.02.05.005",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Provision Aguinaldo": {
+                            "account_number": "2.01.02.05.006",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Provision Bono 14": {
+                            "account_number": "2.01.02.05.007",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Provision Indemnizaciones": {
+                            "account_number": "2.01.02.05.008",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "IMPUESTOS DÉBITO FISCAL": {
+                    "account_number": "2.01.03",
+                    "root_type": "Liability",
+                    "IVA POR PAGAR": {
+                        "account_number": "2.01.03.01",
+                        "root_type": "Liability",
+                        "IVA Debito Fiscal": {
+                            "account_number": "2.01.03.01.001",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA Excensiones": {
+                            "account_number": "2.01.03.01.002",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA por Pagar Factura Especial": {
+                            "account_number": "2.01.03.01.003",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "IVA Retenciones": {
+                            "account_number": "2.01.03.01.004",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ISR POR PAGAR": {
+                        "account_number": "2.01.03.02",
+                        "root_type": "Liability",
+                        "ISR Retenciones": {
+                            "account_number": "2.01.03.02.001",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Trimestral": {
+                            "account_number": "2.01.03.02.002",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Retencion Empleados": {
+                            "account_number": "2.01.03.02.003",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR por Pagar Factura Especial": {
+                            "account_number": "2.01.03.02.004",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Anual por pagar": {
+                            "account_number": "2.01.03.02.005",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR No Domiciliados": {
+                            "account_number": "2.01.03.02.006",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Ganancia de Capital": {
+                            "account_number": "2.01.03.02.007",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "ISR Por Pagar": {
+                            "account_number": "2.01.03.02.008",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "Diferencia ISR Proyectado contra Real": {
+                            "account_number": "2.01.03.02.009",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS IMPUESTOS POR PAGAR": {
+                        "account_number": "2.01.03.03",
+                        "root_type": "Liability",
+                        "ISO por Pagar": {
+                            "account_number": "2.01.03.03.001",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto Unico Sobre Inmuebles": {
+                            "account_number": "2.01.03.03.002",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "Boletos de Ornato": {
+                            "account_number": "2.01.03.03.003",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        },
+                        "Timbres": {
+                            "account_number": "2.01.03.03.004",
+                            "root_type": "Liability",
+                            "account_type": "Tax",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "CUENTAS POR PAGAR DIFERIDO": {
+                    "account_number": "2.01.04",
+                    "root_type": "Liability",
+                    "ANTICIPOS PASIVO": {
+                        "account_number": "2.01.04.01",
+                        "root_type": "Liability",
+                        "Anticipos de proveedores": {
+                            "account_number": "2.01.04.01.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Anticipos a acreedores": {
+                            "account_number": "2.01.04.01.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Anticipos de clientes": {
+                            "account_number": "2.01.04.01.003",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ANTICIPOS DEL EXTERIOR": {
+                        "account_number": "2.01.04.02",
+                        "root_type": "Liability",
+                        "Anticipos de proveedores del exterior Moneda Extranjera": {
+                            "account_number": "2.01.04.02.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Anticipos de acreedores del exterior Moneda Extranjera": {
+                            "account_number": "2.01.04.02.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Anticipos de clientes del exterior Moneda Extranjera": {
+                            "account_number": "2.01.04.02.003",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ANTICIPOS DE EMPLEADOS": {
+                        "account_number": "2.01.04.03",
+                        "root_type": "Liability",
+                        "Anticipos de Empleados": {
+                            "account_number": "2.01.04.03.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS ANTICIPOS RECIBIDOS": {
+                        "account_number": "2.01.04.04",
+                        "root_type": "Liability",
+                        "Depositos de Rentas": {
+                            "account_number": "2.01.04.04.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Ganancias y Pérdidas no realizadas": {
+                            "account_number": "2.01.04.04.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos anticipados o cuentas por liquidar": {
+                            "account_number": "2.01.04.04.003",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Habilitaciones y autorizaciones": {
+                            "account_number": "2.01.04.04.004",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Marcas y Patentes": {
+                            "account_number": "2.01.04.04.005",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Inscripciones": {
+                            "account_number": "2.01.04.04.006",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros prestamos": {
+                            "account_number": "2.01.04.04.007",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Prestamos a empleados": {
+                            "account_number": "2.01.04.04.008",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Rentas Anticipadas": {
+                            "account_number": "2.01.04.04.009",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "PRESTAMOS A CORTO PLAZO": {
+                    "account_number": "2.01.05",
+                    "root_type": "Liability",
+                    "PRESTAMOS BANCARIOS A CORTO PLAZO": {
+                        "account_number": "2.01.05.01",
+                        "root_type": "Liability",
+                        "Tarjetas de crédito por pagar Moneda Nacional": {
+                            "account_number": "2.01.05.01.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Tarjetas de crédito por pagar Moneda Extranjera": {
+                            "account_number": "2.01.05.01.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "USD"
+                        },
+                        "Prestamo Revolvente": {
+                            "account_number": "2.01.05.01.003",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "PRESTAMOS NO BANCARIOS": {
+                        "account_number": "2.01.05.02",
+                        "root_type": "Liability",
+                        "Otras cuentas por pagar": {
+                            "account_number": "2.01.05.02.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Caja chica por pagar": {
+                            "account_number": "2.01.05.02.002",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Depositos por aclarar": {
+                            "account_number": "2.01.05.02.003",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Cuentas por pagar diversas": {
+                            "account_number": "2.01.05.02.004",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Reservas": {
+                            "account_number": "2.01.05.02.005",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Reserva para cuentas incobrables Clientes": {
+                            "account_number": "2.01.05.02.006",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            },
+            "PASIVO NO CORRIENTE": {
+                "account_number": "2.02",
+                "root_type": "Liability",
+                "PRESTAMOS A LARGO PLAZO": {
+                    "account_number": "2.02.01",
+                    "root_type": "Liability",
+                    "PRESTAMOS BANCARIOS A LARGO PLAZO": {
+                        "account_number": "2.02.01.01",
+                        "root_type": "Liability",
+                        "Prestamos Banco Industrial GTQ": {
+                            "account_number": "2.02.01.01.001",
+                            "root_type": "Liability",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            },
+            "Cuenta transitoria para cargar saldos iniciales": {
+                "account_number": "2.8999999999999999",
+                "root_type": "Liability",
+                "account_type": "Temporary",
+                "account_currency": "GTQ"
+            }
+        },
+        "PATRIMONIO": {
+            "account_number": "3",
+            "root_type": "Equity",
+            "CAPITAL": {
+                "account_number": "3.0099999999999998",
+                "root_type": "Equity",
+                "CAPITAL SOCIAL": {
+                    "account_number": "3.01.01",
+                    "root_type": "Equity",
+                    "CAPITAL SUSCRITO Y PAGADO": {
+                        "account_number": "3.01.01.01",
+                        "root_type": "Equity",
+                        "Suscripcion de Acciones": {
+                            "account_number": "3.01.01.01.001",
+                            "root_type": "Liability",
+                            "account_type": "Equity",
+                            "account_currency": "GTQ"
+                        },
+                        "Acciones por Suscribir": {
+                            "account_number": "3.01.01.01.002",
+                            "root_type": "Liability",
+                            "account_type": "Equity",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "UTILIDADES POR DISTRIBUIR": {
+                        "account_number": "3.01.01.02",
+                        "root_type": "Equity",
+                        "Resultados de Ejercicios Anteriores": {
+                            "account_number": "3.01.01.02.001",
+                            "root_type": "Liability",
+                            "account_type": "Equity",
+                            "account_currency": "GTQ"
+                        },
+                        "Resultados del Ejercicio": {
+                            "account_number": "3.01.01.02.002",
+                            "root_type": "Liability",
+                            "account_type": "Equity",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "RESERVA LEGAL": {
+                        "account_number": "3.01.01.03",
+                        "root_type": "Equity",
+                        "Reserva Legal": {
+                            "account_number": "3.01.01.03.001",
+                            "root_type": "Equity",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            },
+            "SUPERÁVIT Y DÉFICIT": {
+                "account_number": "3.02",
+                "root_type": "Equity",
+                "SUPERAVIT ACUMULADO": {
+                    "account_number": "3.02.01",
+                    "root_type": "Liability"
+                },
+                "DEFICIT ACUMULADO": {
+                    "account_number": "3.02.02",
+                    "root_type": "Liability"
+                }
+            }
+        },
+        "VENTAS": {
+            "account_number": "4",
+            "root_type": "Income",
+            "VENTAS NACIONALES": {
+                "account_number": "4.0099999999999998",
+                "root_type": "Income",
+                "VENTAS EN MONEDA NACIONAL": {
+                    "account_number": "4.01.01",
+                    "root_type": "Income",
+                    "Ventas Nacionales": {
+                        "account_number": "4.01.01.001",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "GTQ"
+                    },
+                    "Ventas de Servicios": {
+                        "account_number": "4.01.01.002",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "GTQ"
+                    },
+                    "Otros Ingresos Nacionales": {
+                        "account_number": "4.01.01.003",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "GTQ"
+                    },
+                    "Devoluciones sobre Ventas Nacionales": {
+                        "account_number": "4.01.01.004",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "GTQ"
+                    }
+                },
+                "VENTAS NACIONALES EN MONEDA DEL EXTERIOR": {
+                    "account_number": "4.01.02",
+                    "root_type": "Income",
+                    "Ventas Brutas Nacionales Moneda del Exterior": {
+                        "account_number": "4.01.02.001",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "USD"
+                    },
+                    "Devoluciones sobre Ventas Nacionales Moneda del Exterior": {
+                        "account_number": "4.01.02.002",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "USD"
+                    },
+                    "Descuentos Sobre Ventas Nacionales Moneda del Exterior": {
+                        "account_number": "4.01.02.003",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "USD"
+                    }
+                }
+            },
+            "VENTAS AL EXTERIOR ": {
+                "account_number": "4.0199999999999996",
+                "root_type": "Income",
+                "VENTAS AL EXTERIOR EN MONEDA DEL EXTERIOR": {
+                    "account_number": "4.02.01",
+                    "root_type": "Income",
+                    "Ventas Brutas al Exterior USD": {
+                        "account_number": "4.02.01.001",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "USD"
+                    },
+                    "Devoluciones sobre Ventas al Exterior USD": {
+                        "account_number": "4.02.01.002",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "USD"
+                    },
+                    "Descuentos sobre ventas al Exterior USD": {
+                        "account_number": "4.02.01.003",
+                        "root_type": "Income",
+                        "account_type": "Income Account",
+                        "account_currency": "USD"
+                    }
+                }
+            }
+        },
+        "COSTOS": {
+            "account_number": "5",
+            "root_type": "Expense",
+            "COSTOS DE PRODUCCIÓN": {
+                "account_number": "5.0099999999999998",
+                "root_type": "Expense",
+                "COSTOS DIRECTOS DE PRODUCCIÓN": {
+                    "account_number": "5.01.01",
+                    "root_type": "Expense",
+                    "MATERIA PRIMA": {
+                        "account_number": "5.01.01.01",
+                        "root_type": "Expense",
+                        "Costo Primo de Ventas": {
+                            "account_number": "5.01.01.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Cost of Goods Sold",
+                            "account_currency": "GTQ"
+                        },
+                        "Material": {
+                            "account_number": "5.01.01.01.002",
+                            "root_type": "Expense",
+                            "account_type": "Cost of Goods Sold",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "COSTOS INCREMENTALES ": {
+                        "account_number": "5.01.01.02",
+                        "root_type": "Expense",
+                        "Fletes y Acarreos S/Compra Mercaderia": {
+                            "account_number": "5.01.01.02.001",
+                            "root_type": "Expense",
+                            "account_type": "Cost of Goods Sold",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "COSTOS DE IMPORTACIÓN Y EXPORTACIÓN": {
+                        "account_number": "5.01.01.03",
+                        "root_type": "Expense",
+                        "Gastos de Importación para valuación puesto en bodega": {
+                            "account_number": "5.01.01.03.001",
+                            "root_type": "Expense",
+                            "account_type": "Expenses Included In Valuation",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos para valuación de Activos Fijos": {
+                            "account_number": "5.01.01.03.002",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Costos de Exportación": {
+                            "account_number": "5.01.01.03.003",
+                            "root_type": "Expense",
+                            "account_type": "Cost of Goods Sold",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "COSTOS INDIRECTOS DE PRODUCCIÓN": {
+                    "account_number": "5.01.02",
+                    "root_type": "Expense",
+                    "SERVICIOS DE PRODUCCIÓN": {
+                        "account_number": "5.01.02.01",
+                        "root_type": "Expense",
+                        "Energía Eléctrica": {
+                            "account_number": "5.01.02.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Agua": {
+                            "account_number": "5.01.02.01.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Teléfono e internet": {
+                            "account_number": "5.01.02.01.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS SERVICIOS DE PRODUCCIÓN": {
+                        "account_number": "5.01.02.02",
+                        "root_type": "Expense",
+                        "Mensajería": {
+                            "account_number": "5.01.02.02.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicio de limpieza y recoleccion de basura": {
+                            "account_number": "5.01.02.02.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Seguridad y alarma": {
+                            "account_number": "5.01.02.02.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Seguros": {
+                            "account_number": "5.01.02.02.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Fletes": {
+                            "account_number": "5.01.02.02.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicio de IT": {
+                            "account_number": "5.01.02.02.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicios y Honorarios Profesionales": {
+                            "account_number": "5.01.02.02.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicios Técnicos": {
+                            "account_number": "5.01.02.02.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicios del Exterior": {
+                            "account_number": "5.01.02.02.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "USD"
+                        }
+                    },
+                    "ATENCIÓN AL PERSONAL DE PRODUCCIÓN": {
+                        "account_number": "5.01.02.03",
+                        "root_type": "Expense",
+                        "Atencion al personal": {
+                            "account_number": "5.01.02.03.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Botiquin": {
+                            "account_number": "5.01.02.03.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Uniformes": {
+                            "account_number": "5.01.02.03.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "COSTOS DE OPERACIÓN DE PRODUCCIÓN": {
+                        "account_number": "5.01.02.04",
+                        "root_type": "Expense",
+                        "Despensa y Articulos de Aseo": {
+                            "account_number": "5.01.02.04.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Papeleria y Utiles de Oficina": {
+                            "account_number": "5.01.02.04.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Combustibles y lubricantes": {
+                            "account_number": "5.01.02.04.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "COSTOS DE MANTENIMIENTO PRODUCCIÓN": {
+                        "account_number": "5.01.02.05",
+                        "root_type": "Expense",
+                        "Mantenimiento a Equipo Computo": {
+                            "account_number": "5.01.02.05.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Herramientas": {
+                            "account_number": "5.01.02.05.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Inmuebles": {
+                            "account_number": "5.01.02.05.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento de Maquinaria": {
+                            "account_number": "5.01.02.05.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Mobiliario y Equipo": {
+                            "account_number": "5.01.02.05.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Vehículos": {
+                            "account_number": "5.01.02.05.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Otros Activos": {
+                            "account_number": "5.01.02.05.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Software": {
+                            "account_number": "5.01.02.05.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros Activos Fijos Intangibles": {
+                            "account_number": "5.01.02.05.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "DEPRECIACIONES EN PRODUCCIÓN": {
+                        "account_number": "5.01.02.06",
+                        "root_type": "Expense",
+                        "Depreciación de Equipo Computo en Producción": {
+                            "account_number": "5.01.02.06.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Herramientas en Producción": {
+                            "account_number": "5.01.02.06.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Inmuebles en Producción": {
+                            "account_number": "5.01.02.06.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Maquinaria en Producción": {
+                            "account_number": "5.01.02.06.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Mobiliario y Equipo en Producción": {
+                            "account_number": "5.01.02.06.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Vehículos en Producción": {
+                            "account_number": "5.01.02.06.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Dominio de internet en Producción": {
+                            "account_number": "5.01.02.06.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Software en Producción": {
+                            "account_number": "5.01.02.06.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Propiedad Intelectual en Producción": {
+                            "account_number": "5.01.02.06.010",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Marcas en Producción": {
+                            "account_number": "5.01.02.06.011",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Patentes en Producción": {
+                            "account_number": "5.01.02.06.012",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Derecho de Llave en Producción": {
+                            "account_number": "5.01.02.06.013",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Otros Activos Fijos Intangibles en Producción": {
+                            "account_number": "5.01.02.06.014",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "RENTAS Y ALQUILERES PRODUCCIÓN": {
+                        "account_number": "5.01.02.07",
+                        "root_type": "Expense",
+                        "Alquiler de Derecho de Llave": {
+                            "account_number": "5.01.02.07.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Equipo Computo": {
+                            "account_number": "5.01.02.07.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Herramientas": {
+                            "account_number": "5.01.02.07.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Inmuebles": {
+                            "account_number": "5.01.02.07.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Maquinaria": {
+                            "account_number": "5.01.02.07.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Mobiliario y Equipo": {
+                            "account_number": "5.01.02.07.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Otros Activos": {
+                            "account_number": "5.01.02.07.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Software": {
+                            "account_number": "5.01.02.07.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Vehículos": {
+                            "account_number": "5.01.02.07.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "IMPUESTOS Y CONTRIBUCIONES EN PRODUCCION": {
+                        "account_number": "5.01.02.08",
+                        "root_type": "Expense",
+                        "IDP Combustibles": {
+                            "account_number": "5.01.02.08.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto de Circulación de Vehículos": {
+                            "account_number": "5.01.02.08.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto Único Sobre Inmuebles": {
+                            "account_number": "5.01.02.08.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto de Turismo": {
+                            "account_number": "5.01.02.08.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Tasa Municipal Alumbrado Público": {
+                            "account_number": "5.01.02.08.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Timbre de Prensa": {
+                            "account_number": "5.01.02.08.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Timbres Fiscales": {
+                            "account_number": "5.01.02.08.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Timbres Notariales": {
+                            "account_number": "5.01.02.08.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Autorizaciones y Habilitaciones en Producción": {
+                            "account_number": "5.01.02.08.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Peajes en Producción": {
+                            "account_number": "5.01.02.08.010",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Multas de Tránsito en Producción": {
+                            "account_number": "5.01.02.08.011",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ATENCIÓN AL CLIENTE PRODUCCIÓN": {
+                        "account_number": "5.01.02.09",
+                        "root_type": "Expense",
+                        "Garantías": {
+                            "account_number": "5.01.02.09.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos de representación": {
+                            "account_number": "5.01.02.09.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos de viaje": {
+                            "account_number": "5.01.02.09.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ATENCIÓN AL PROVEEDOR PRODUCCIÓN": {
+                        "account_number": "5.01.02.10",
+                        "root_type": "Expense",
+                        "Gastos de representación": {
+                            "account_number": "5.01.02.10.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos de Viaje": {
+                            "account_number": "5.01.02.10.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "LEASING PRODUCCIÓN": {
+                        "account_number": "5.01.02.11",
+                        "root_type": "Expense",
+                        "Leasing Maquinaria Producción": {
+                            "account_number": "5.01.02.11.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Leasing Vehículos Producción": {
+                            "account_number": "5.01.02.11.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "COSTOS PRODUCCIÓN": {
+                        "account_number": "5.01.02.12",
+                        "root_type": "Expense",
+                        "Diferencias de Inventario": {
+                            "account_number": "5.01.02.12.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS GASTOS PRODUCCIÓN": {
+                        "account_number": "5.01.02.13",
+                        "root_type": "Expense",
+                        "Gastos no Deducibles": {
+                            "account_number": "5.01.02.13.001",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos navideños": {
+                            "account_number": "5.01.02.13.002",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Parqueo": {
+                            "account_number": "5.01.02.13.003",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Cuotas y suscripciones": {
+                            "account_number": "5.01.02.13.004",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            }
+        },
+        "GASTOS": {
+            "account_number": "6",
+            "root_type": "Expense",
+            "GASTOS DE ADMINITRACIÓN Y VENTAS": {
+                "account_number": "6.0099999999999998",
+                "root_type": "Expense",
+                "GASTOS DIRECTOS": {
+                    "account_number": "6.01.01",
+                    "root_type": "Expense",
+                    "SUELDOS": {
+                        "account_number": "6.01.01.01",
+                        "root_type": "Expense",
+                        "Sueldos de": {
+                            "account_number": "6.01.01.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "HORAS EXTRAS": {
+                        "account_number": "6.01.01.02",
+                        "root_type": "Expense",
+                        "Horas Extras": {
+                            "account_number": "6.01.01.02.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "BONIFICACIONES": {
+                        "account_number": "6.01.01.03",
+                        "root_type": "Expense",
+                        "Bonificación Decreto 37-2001": {
+                            "account_number": "6.01.01.03.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Bonificación Productividad": {
+                            "account_number": "6.01.01.03.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Bonificación Decreto 78-89": {
+                            "account_number": "6.01.01.03.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "DESCUENTOS": {
+                        "account_number": "6.01.01.04",
+                        "root_type": "Expense",
+                        "Descuentos Judiciales": {
+                            "account_number": "6.01.01.04.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Descuentos a Empleados por Pagar": {
+                            "account_number": "6.01.01.04.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Descuentos Uniformes": {
+                            "account_number": "6.01.01.04.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Descuentos Varios": {
+                            "account_number": "6.01.01.04.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "PRESTACIONES DE LEY AL PERSONAL": {
+                        "account_number": "6.01.01.05",
+                        "root_type": "Expense",
+                        "IGSS Cuota Patronal": {
+                            "account_number": "6.01.01.05.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "IGSS Cuota Empleado": {
+                            "account_number": "6.01.01.05.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Vacaciones": {
+                            "account_number": "6.01.01.05.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "IRTRA": {
+                            "account_number": "6.01.01.05.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "INTECAP": {
+                            "account_number": "6.01.01.05.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Aguinaldo": {
+                            "account_number": "6.01.01.05.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Bono 14": {
+                            "account_number": "6.01.01.05.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Indemnizaciones": {
+                            "account_number": "6.01.01.05.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTRAS PRESTACIONES": {
+                        "account_number": "6.01.01.06",
+                        "root_type": "Expense",
+                        "Bonificaciones por": {
+                            "account_number": "6.01.01.06.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Viáticos": {
+                            "account_number": "6.01.01.06.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Otras Bonificaciones": {
+                            "account_number": "6.01.01.06.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "GASTOS INDIRECTOS": {
+                    "account_number": "6.01.02",
+                    "root_type": "Expense",
+                    "SERVICIOS DE ADMINISTRACIÓN": {
+                        "account_number": "6.01.02.01",
+                        "root_type": "Expense",
+                        "Energía Eléctrica": {
+                            "account_number": "6.01.02.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Agua": {
+                            "account_number": "6.01.02.01.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Teléfono e internet": {
+                            "account_number": "6.01.02.01.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS SERVICIOS": {
+                        "account_number": "6.01.02.02",
+                        "root_type": "Expense",
+                        "Mensajería": {
+                            "account_number": "6.01.02.02.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicio de limpieza y recoleccion de basura": {
+                            "account_number": "6.01.02.02.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Seguridad y alarma": {
+                            "account_number": "6.01.02.02.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Seguros": {
+                            "account_number": "6.01.02.02.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Fletes": {
+                            "account_number": "6.01.02.02.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicio de IT": {
+                            "account_number": "6.01.02.02.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicios y Honorarios Profesionales": {
+                            "account_number": "6.01.02.02.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicios Técnicos": {
+                            "account_number": "6.01.02.02.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Servicios del Exterior": {
+                            "account_number": "6.01.02.02.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "USD"
+                        }
+                    },
+                    "ATENCIÓN AL PERSONAL": {
+                        "account_number": "6.01.02.03",
+                        "root_type": "Expense",
+                        "Atencion al personal": {
+                            "account_number": "6.01.02.03.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Botiquin": {
+                            "account_number": "6.01.02.03.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Uniformes": {
+                            "account_number": "6.01.02.03.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alimentos": {
+                            "account_number": "6.01.02.03.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "SUMINISTROS": {
+                        "account_number": "6.01.02.04",
+                        "root_type": "Expense",
+                        "Despensa y Articulos de Aseo": {
+                            "account_number": "6.01.02.04.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Papeleria y Utiles de Oficina": {
+                            "account_number": "6.01.02.04.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Combustibles y lubricantes": {
+                            "account_number": "6.01.02.04.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "GASTOS DE MANTENIMIENTO": {
+                        "account_number": "6.01.02.05",
+                        "root_type": "Expense",
+                        "Mantenimiento a Equipo Computo": {
+                            "account_number": "6.01.02.05.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Herramientas": {
+                            "account_number": "6.01.02.05.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Inmuebles": {
+                            "account_number": "6.01.02.05.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento de Maquinaria": {
+                            "account_number": "6.01.02.05.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Mobiliario y Equipo": {
+                            "account_number": "6.01.02.05.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Vehículos": {
+                            "account_number": "6.01.02.05.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Otros Activos": {
+                            "account_number": "6.01.02.05.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mantenimiento a Software": {
+                            "account_number": "6.01.02.05.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros Activos Fijos Intangibles": {
+                            "account_number": "6.01.02.05.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "DEPRECIACIONES GASTO": {
+                        "account_number": "6.01.02.06",
+                        "root_type": "Expense",
+                        "Depreciación de Equipo Gasto": {
+                            "account_number": "6.01.02.06.001",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Herramientas Gasto": {
+                            "account_number": "6.01.02.06.007",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Inmuebles Gasto": {
+                            "account_number": "6.01.02.06.003",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Maquinaria Gasto": {
+                            "account_number": "6.01.02.06.004",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Mobiliario y Equipo Gasto": {
+                            "account_number": "6.01.02.06.005",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Vehículos Gasto": {
+                            "account_number": "6.01.02.06.006",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Otros Activos Fijos Gasto": {
+                            "account_number": "6.01.02.06.008",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Dominio de internet Gasto": {
+                            "account_number": "6.01.02.06.009",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Software Gasto": {
+                            "account_number": "6.01.02.06.010",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Propiedad Intelectual Gasto": {
+                            "account_number": "6.01.02.06.011",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Marcas Gasto": {
+                            "account_number": "6.01.02.06.012",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Patentes Gasto": {
+                            "account_number": "6.01.02.06.013",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Derecho de Llave Gasto": {
+                            "account_number": "6.01.02.06.014",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        },
+                        "Depreciación de Otros Activos Fijos Intangibles Gasto": {
+                            "account_number": "6.01.02.06.015",
+                            "root_type": "Expense",
+                            "account_type": "Depreciation",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "RENTAS Y ALQUILERES": {
+                        "account_number": "6.01.02.07",
+                        "root_type": "Expense",
+                        "Alquiler de Derecho de Llave": {
+                            "account_number": "6.01.02.07.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Equipo Computo": {
+                            "account_number": "6.01.02.07.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Herramientas": {
+                            "account_number": "6.01.02.07.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Inmuebles": {
+                            "account_number": "6.01.02.07.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Maquinaria": {
+                            "account_number": "6.01.02.07.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Mobiliario y Equipo": {
+                            "account_number": "6.01.02.07.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Otros Activos": {
+                            "account_number": "6.01.02.07.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Software": {
+                            "account_number": "6.01.02.07.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Alquiler de Vehículos": {
+                            "account_number": "6.01.02.07.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "IMPUESTOS Y CONTRIBUCIONES": {
+                        "account_number": "6.01.02.08",
+                        "root_type": "Expense",
+                        "IDP Combustibles": {
+                            "account_number": "6.01.02.08.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto de Circulación de Vehículos": {
+                            "account_number": "6.01.02.08.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto Único Sobre Inmuebles": {
+                            "account_number": "6.01.02.08.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto de Turismo Hospedaje": {
+                            "account_number": "6.01.02.08.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto de Turismo Pasajes": {
+                            "account_number": "6.01.02.08.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Tasa Municipal Alumbrado Público": {
+                            "account_number": "6.01.02.08.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto al Tabaco": {
+                            "account_number": "6.01.02.08.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto a la Distribución de Bebidas No Alcohólicas": {
+                            "account_number": "6.01.02.08.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuesto a la Distribución de Bebidas Alcohólicas": {
+                            "account_number": "6.01.02.08.009",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Cemento": {
+                            "account_number": "6.01.02.08.010",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Bomberos": {
+                            "account_number": "6.01.02.08.011",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Impuestos no deducibles": {
+                            "account_number": "6.01.02.08.012",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Moras, y otros recargos": {
+                            "account_number": "6.01.02.08.013",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Timbre de Prensa": {
+                            "account_number": "6.01.02.08.014",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Timbres Fiscales": {
+                            "account_number": "6.01.02.08.015",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Timbres Notariales": {
+                            "account_number": "6.01.02.08.016",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Autorizaciones y Habilitaciones en Administración": {
+                            "account_number": "6.01.02.08.017",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Peajes en Administración": {
+                            "account_number": "6.01.02.08.018",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Multas de Tránsito en Administración": {
+                            "account_number": "6.01.02.08.019",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ATENCIÓN AL CLIENTE Y AL PROVEEDOR": {
+                        "account_number": "6.01.02.09",
+                        "root_type": "Expense",
+                        "Atención al Cliente Administración": {
+                            "account_number": "6.01.02.09.001",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Garantías": {
+                            "account_number": "6.01.02.09.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos de representación": {
+                            "account_number": "6.01.02.09.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos de viaje": {
+                            "account_number": "6.01.02.09.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "ATENCIÓN AL PROVEEDOR": {
+                        "account_number": "6.01.02.10",
+                        "root_type": "Expense",
+                        "Gastos de representación": {
+                            "account_number": "6.01.02.10.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos de Viaje": {
+                            "account_number": "6.01.02.10.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "LEASING": {
+                        "account_number": "6.01.02.11",
+                        "root_type": "Expense",
+                        "Leasing Equipo Administración": {
+                            "account_number": "6.01.02.11.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Leasing Vehículos Administración": {
+                            "account_number": "6.01.02.11.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "OTROS GASTOS": {
+                        "account_number": "6.01.02.12",
+                        "root_type": "Expense",
+                        "Gastos navideños": {
+                            "account_number": "6.01.02.12.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Parqueo": {
+                            "account_number": "6.01.02.12.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Cuotas y suscripciones": {
+                            "account_number": "6.01.02.12.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "GASTOS INDIRECTOS DE VENTAS": {
+                    "account_number": "6.01.03",
+                    "root_type": "Expense",
+                    "PUBLICIDAD Y MERCADEO": {
+                        "account_number": "6.01.03.01",
+                        "root_type": "Expense",
+                        "Publicidad Digital": {
+                            "account_number": "6.01.03.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Publicidad Exterior": {
+                            "account_number": "6.01.03.01.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Mercadeo": {
+                            "account_number": "6.01.03.01.003",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            }
+        },
+        "GASTOS NO DEDUCIBLES": {
+            "account_number": "6.01.02.13",
+            "root_type": "Expense",
+            "Alimentos y Bebidas": {
+                "account_number": "6.01.02.13.001",
+                "root_type": "Expense",
+                "account_type": "Expense Account",
+                "account_currency": "GTQ"
+            },
+            "Gastos de logística": {
+                "account_number": "6.01.02.13.002",
+                "root_type": "Expense",
+                "account_type": "Expense Account",
+                "account_currency": "GTQ"
+            },
+            "Gastos en activos no utilizados en la operación": {
+                "account_number": "6.01.02.13.003",
+                "root_type": "Expense",
+                "account_type": "Expense Account",
+                "account_currency": "GTQ"
+            },
+            "Gastos sin respaldo documental": {
+                "account_number": "6.01.02.13.004",
+                "root_type": "Expense",
+                "account_type": "Expense Account",
+                "account_currency": "GTQ"
+            },
+            "Multas y sanciones": {
+                "account_number": "6.01.02.13.005",
+                "root_type": "Expense",
+                "account_type": "Expense Account",
+                "account_currency": "GTQ"
+            },
+            "Otros Gastos No Deducibles": {
+                "account_number": "6.01.02.13.006",
+                "root_type": "Expense",
+                "account_type": "Expense Account",
+                "account_currency": "GTQ"
+            }
+        },
+        "OTROS INGRESOS Y GASTOS": {
+            "account_number": "7",
+            "root_type": "Expense",
+            "INGRESOS NO OPERATIVOS": {
+                "account_number": "7.0099999999999998",
+                "root_type": "Expense",
+                "INGRESOS FINANCIEROS": {
+                    "account_number": "7.01.01",
+                    "root_type": "Expense",
+                    "INGRESOS POR INTERESES": {
+                        "account_number": "7.01.01.01",
+                        "root_type": "Expense",
+                        "Intereses Ganados en Cuenta Bancaria Monetaria Banco Industrial": {
+                            "account_number": "7.01.01.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Income Account",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                },
+                "INGRESOS POR GANANCIA DE CAPITAL": {
+                    "account_number": "7.01.02",
+                    "root_type": "Expense",
+                    "INGRESOS POR VENTA DE ACTIVOS": {
+                        "account_number": "7.01.02.01",
+                        "root_type": "Expense",
+                        "Ingresos por venta de Activos Fijos": {
+                            "account_number": "7.01.02.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Income Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Ganacias de Capital": {
+                            "account_number": "7.01.02.01.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            },
+            "GASTOS NO OPERATIVOS": {
+                "account_number": "7.0199999999999996",
+                "root_type": "Expense",
+                "GASTOS FINANCIEROS": {
+                    "account_number": "7.02.01",
+                    "root_type": "Expense",
+                    "GASTOS BANCARIOS": {
+                        "account_number": "7.02.01.01",
+                        "root_type": "Expense",
+                        "Intereses pagados a prestamo": {
+                            "account_number": "7.02.01.01.001",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Otros gastos Bancarios": {
+                            "account_number": "7.02.01.01.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Diferencial cambiario": {
+                            "account_number": "7.02.01.01.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Diferencial cambiario no realizado": {
+                            "account_number": "7.02.01.01.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gasto de cheques rechazado": {
+                            "account_number": "7.02.01.01.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Descuentos y Productos tarjetas de credito": {
+                            "account_number": "7.02.01.01.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Comisiones Bancarias": {
+                            "account_number": "7.02.01.01.007",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Multas moras y recargos": {
+                            "account_number": "7.02.01.01.008",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    },
+                    "GASTOS NO BANCARIOS": {
+                        "account_number": "7.02.01.02",
+                        "root_type": "Expense",
+                        "Arrendamientos": {
+                            "account_number": "7.02.01.02.001",
+                            "root_type": "Expense",
+                            "account_type": "",
+                            "account_currency": "GTQ"
+                        },
+                        "Multas, Moras y Recargos": {
+                            "account_number": "7.02.01.02.002",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Cuenta de Redondeo": {
+                            "account_number": "7.02.01.02.003",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Gastos Varios": {
+                            "account_number": "7.02.01.02.004",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Cancelaciones": {
+                            "account_number": "7.02.01.02.005",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        },
+                        "Ganancia/Pérdida por Disposición de Activos": {
+                            "account_number": "7.02.01.02.006",
+                            "root_type": "Expense",
+                            "account_type": "Expense Account",
+                            "account_currency": "GTQ"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

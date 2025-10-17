@@ -986,7 +986,8 @@ class update_entries_after:
 			if abs(sle.actual_qty) == 0.0:
 				sle.is_cancelled = 1
 
-		if sle.serial_and_batch_bundle and frappe.get_cached_value("Item", sle.item_code, "has_serial_no"):
+		# if sle.serial_and_batch_bundle and frappe.get_cached_value("Item", sle.item_code, "has_serial_no"):
+		if sle.serial_and_batch_bundle and (not self.use_moving_avg_for_batch or sle.has_serial_no) and self.valuation_method != "Moving Average":
 			self.update_serial_no_status(sle)
 
 	def update_serial_no_status(self, sle):

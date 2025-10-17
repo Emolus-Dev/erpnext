@@ -155,8 +155,8 @@ class GLEntry(Document):
 			)
 		):
 			frappe.throw(
-				_("{0} {1}: Either debit or credit amount is required for {2}").format(
-					self.voucher_type, self.voucher_no, self.account
+				_("{0} {1}: Either debit or credit amount is required for {2}, {3}").format(
+					self.voucher_type, self.voucher_no, self.account, f"{flt(self.debit, self.precision('debit'))} {flt(self.credit, self.precision('credit'))}"
 				)
 			)
 

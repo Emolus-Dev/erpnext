@@ -30,6 +30,10 @@
   {
    "chart": "Item Shortage Summary",
    "width": "Half"
+  },
+  {
+   "chart": "VENTAS POR CLIENTE ACUMULADAS",
+   "width": "Half"
   }
  ],
  "creation": "2020-07-20 21:01:04.549136",
@@ -37,10 +41,10 @@
  "docstatus": 0,
  "doctype": "Dashboard",
  "idx": 0,
- "is_default": 1,
+ "is_default": 0,
  "is_standard": 1,
- "modified": "2020-07-22 13:09:33.096694",
- "modified_by": "Administrator",
+ "modified": "2025-10-08 08:00:56.184662",
+ "modified_by": "administracion@iclalb.com",
  "module": "Stock",
  "name": "Stock",
  "owner": "Administrator"
