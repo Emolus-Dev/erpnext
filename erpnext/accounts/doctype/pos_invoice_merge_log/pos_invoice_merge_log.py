@@ -254,14 +254,38 @@ class POSInvoiceMergeLog(Document):
 						)
 						update_item_wise_tax_detail(t, tax)
 						found = True
+				# if not found:
+				# 	tax.charge_type = "Actual"
+				# 	tax.idx = idx
+				# 	tax.row_id = None
+				# 	idx += 1
+				# 	tax.included_in_print_rate = 0
+				# 	tax.tax_amount = tax.tax_amount_after_discount_amount
+				# 	tax.base_tax_amount = tax.base_tax_amount_after_discount_amount
+				# 	tax.item_wise_tax_detail = tax.item_wise_tax_detail
+				# 	taxes.append(tax)
 				if not found:
-					tax.charge_type = "Actual"
+					# tax.charge_type = "Actual"
+					# tax.idx = idx
+					# tax.row_id = None
+					# idx += 1
+					# tax.included_in_print_rate = 0
+					# tax.tax_amount = tax.tax_amount_after_discount_amount
+					# tax.base_tax_amount = tax.base_tax_amount_after_discount_amount
+					# tax.item_wise_tax_detail = tax.item_wise_tax_detail
+					# taxes.append(tax)
 					tax.idx = idx
 					tax.row_id = None
 					idx += 1
-					tax.included_in_print_rate = 0
-					tax.tax_amount = tax.tax_amount_after_discount_amount
-					tax.base_tax_amount = tax.base_tax_amount_after_discount_amount
+					# Si el tax estaba incluido en el precio, mantener charge_type original
+					# porque los items ya van con net_rate (sin impuesto)
+					if tax.included_in_print_rate:
+						tax.included_in_print_rate = 0
+						# Mantener charge_type original para que se recalcule correctamente
+					else:
+						tax.charge_type = "Actual"
+						tax.tax_amount = tax.tax_amount_after_discount_amount
+						tax.base_tax_amount = tax.base_tax_amount_after_discount_amount
 					tax.item_wise_tax_detail = tax.item_wise_tax_detail
 					taxes.append(tax)
 
