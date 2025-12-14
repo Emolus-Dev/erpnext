@@ -155,7 +155,8 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reports",
-   "link_count": 0,
+   "link_count": 3,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -163,16 +164,36 @@
    "dependencies": "Issue",
    "hidden": 0,
    "is_query_report": 1,
-   "label": "First Response Time for Issues",
+   "label": "Tiempo de primera respuesta para incidencias",
    "link_count": 0,
    "link_to": "First Response Time for Issues",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Resumen de Incidencias",
+   "link_count": 0,
+   "link_to": "Issue Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Analisis de Incidencias",
+   "link_count": 0,
+   "link_to": "Issue Analytics",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-05-24 14:47:23.408966",
- "modified_by": "Administrator",
+ "modified": "2025-11-10 22:08:45.338677",
+ "modified_by": "aruiz@triplestela.com",
  "module": "Support",
  "name": "Support",
  "number_cards": [],
@@ -182,7 +203,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 12.0,
+ "sequence_id": 20.0,
  "shortcuts": [
   {
    "color": "Yellow",

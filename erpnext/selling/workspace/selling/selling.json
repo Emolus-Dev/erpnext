@@ -5,7 +5,7 @@
    "label": "Sales Order Trends"
   }
  ],
- "content": "[{\"id\":\"vBSf8Vi9U8\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Order Trends\",\"col\":12}},{\"id\":\"aW2i5R5GRP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"1it3dCOnm6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Acceso r\u00e1pido</b></span>\",\"col\":12}},{\"id\":\"x7pLl-spS4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"SSGrXWmY-H\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"-5J_yLxDaS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Analytics\",\"col\":3}},{\"id\":\"c_GjZuZ2oN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"mX-9DJSyT2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Learn Sales Management\",\"col\":3}},{\"id\":\"KHVhAQnb5J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Punto de Venta\",\"col\":3}},{\"id\":\"oNjjNbnUHp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0BcePLg0g1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Informes &amp; Datos Maestros</b></span>\",\"col\":12}},{\"id\":\"uze5dJ1ipL\",\"type\":\"card\",\"data\":{\"card_name\":\"Selling\",\"col\":4}},{\"id\":\"3j2fYwMAkq\",\"type\":\"card\",\"data\":{\"card_name\":\"Point of Sale\",\"col\":4}},{\"id\":\"xImm8NepFt\",\"type\":\"card\",\"data\":{\"card_name\":\"Items and Pricing\",\"col\":4}},{\"id\":\"6MjIe7KCQo\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"lBu2EKgmJF\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"1ARHrjg4kI\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"vBSf8Vi9U8\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Order Trends\",\"col\":12}},{\"id\":\"aW2i5R5GRP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"1it3dCOnm6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Acceso r\u00e1pido</b></span>\",\"col\":12}},{\"id\":\"x7pLl-spS4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"SSGrXWmY-H\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"-5J_yLxDaS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Analytics\",\"col\":3}},{\"id\":\"c_GjZuZ2oN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"mX-9DJSyT2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Learn Sales Management\",\"col\":3}},{\"id\":\"KHVhAQnb5J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Punto de Venta\",\"col\":3}},{\"id\":\"oNjjNbnUHp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0BcePLg0g1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Informes &amp; Datos Maestros</b></span>\",\"col\":12}},{\"id\":\"uze5dJ1ipL\",\"type\":\"card\",\"data\":{\"card_name\":\"Selling\",\"col\":4}},{\"id\":\"3j2fYwMAkq\",\"type\":\"card\",\"data\":{\"card_name\":\"Point of Sale\",\"col\":4}},{\"id\":\"xImm8NepFt\",\"type\":\"card\",\"data\":{\"card_name\":\"Items and Pricing\",\"col\":4}},{\"id\":\"6MjIe7KCQo\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"lBu2EKgmJF\",\"type\":\"card\",\"data\":{\"card_name\":\"Reportes clave\",\"col\":4}},{\"id\":\"1ARHrjg4kI\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
  "creation": "2020-01-28 11:49:12.092882",
  "custom_blocks": [],
  "docstatus": 0,
@@ -387,113 +387,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Key Reports",
-   "link_count": 9,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Sales Analytics",
-   "link_count": 0,
-   "link_to": "Sales Analytics",
-   "link_type": "Report",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Sales Order",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Sales Order Analysis",
-   "link_count": 0,
-   "link_to": "Sales Order Analysis",
-   "link_type": "Report",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Sales Funnel",
-   "link_count": 0,
-   "link_to": "sales-funnel",
-   "link_type": "Page",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Sales Order",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Sales Order Trends",
-   "link_count": 0,
-   "link_to": "Sales Order Trends",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Quotation",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Quotation Trends",
-   "link_count": 0,
-   "link_to": "Quotation Trends",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Customer",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Customer Acquisition and Loyalty",
-   "link_count": 0,
-   "link_to": "Customer Acquisition and Loyalty",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Sales Order",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Inactive Customers",
-   "link_count": 0,
-   "link_to": "Inactive Customers",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Sales Order",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Sales Person-wise Transaction Summary",
-   "link_count": 0,
-   "link_to": "Sales Person-wise Transaction Summary",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "dependencies": "Item",
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Item-wise Sales History",
-   "link_count": 0,
-   "link_to": "Item-wise Sales History",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Other Reports",
    "link_count": 11,
    "onboard": 0,
@@ -619,10 +512,128 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reportes clave",
+   "link_count": 10,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "An\u00e1lisis de ventas",
+   "link_count": 0,
+   "link_to": "Sales Analytics",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Sales Order",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "An\u00e1lisis de \u00f3rdenes de venta",
+   "link_count": 0,
+   "link_to": "Sales Order Analysis",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\"Embudo\" de ventas",
+   "link_count": 0,
+   "link_to": "sales-funnel",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Sales Order",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Tendencias de ordenes de ventas",
+   "link_count": 0,
+   "link_to": "Sales Order Trends",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Quotation",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Tendencias de Presupuestos",
+   "link_count": 0,
+   "link_to": "Quotation Trends",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Customer",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Compras y Lealtad de Clientes",
+   "link_count": 0,
+   "link_to": "Customer Acquisition and Loyalty",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Sales Order",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Clientes Inactivos",
+   "link_count": 0,
+   "link_to": "Inactive Customers",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Sales Order",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Resumen de transacciones por vendedor",
+   "link_count": 0,
+   "link_to": "Sales Person-wise Transaction Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Item",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Detalle de las Ventas",
+   "link_count": 0,
+   "link_to": "Item-wise Sales History",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Ventas por Vendedor",
+   "link_count": 0,
+   "link_to": "Ventas por Vendedor",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-08-27 16:22:56.413091",
- "modified_by": "bfigueroa@autofrio.com",
+ "modified": "2025-10-31 07:40:13.405524",
+ "modified_by": "padilla.julian@gmail.com",
  "module": "Selling",
  "name": "Selling",
  "number_cards": [],
