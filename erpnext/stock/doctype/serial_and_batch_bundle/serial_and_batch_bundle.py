@@ -817,6 +817,18 @@ class SerialandBatchBundle(Document):
 		# 	.where(timestamp_condition)
 		# )
 		serial_no_table = frappe.qb.DocType("Serial No")
+		# Build base query without the isin condition for serial_nos
+		base_conditions = (
+			(child.parent != self.name)
+			& (parent.item_code == self.item_code)
+			& (parent.docstatus == 1)
+			& (parent.is_cancelled == 0)
+			& (parent.type_of_transaction.isin(["Inward", "Outward"]))
+			& (serial_no_table.company == self.company)
+			& (parent.company == self.company)
+			& (parent.warehouse == child.warehouse)
+		)
+
 		future_entries = (
 			frappe.qb.from_(parent)
 			.inner_join(child)
@@ -828,19 +840,9 @@ class SerialandBatchBundle(Document):
 				parent.voucher_type,
 				parent.voucher_no,
 				parent.company,
-				serial_no_table.company.as_("serial_company")
+				serial_no_table.company.as_("serial_company"),
 			)
-			.where(
-				(child.serial_no.isin(serial_nos))
-				& (child.parent != self.name)
-				& (parent.item_code == self.item_code)
-				& (parent.docstatus == 1)
-				& (parent.is_cancelled == 0)
-				& (parent.type_of_transaction.isin(["Inward", "Outward"]))
-				& (serial_no_table.company == self.company)
-				& (parent.company == self.company)
-				& (parent.warehouse == child.warehouse)
-			)
+			.where(base_conditions)
 			.where(timestamp_condition)
 		)
 
@@ -1126,7 +1128,11 @@ class SerialandBatchBundle(Document):
 		incorrect_serial_nos = frappe.get_all(
 			"Serial No",
 			# filters={"name": ("in", serial_nos), "item_code": ("!=", self.item_code)},
-			filters={"name": ("in", serial_nos), "item_code": ("!=", self.item_code), "company": self.company },
+			filters={
+				"name": ("in", serial_nos),
+				"item_code": ("!=", self.item_code),
+				"company": self.company,
+			},
 			fields=["name"],
 		)
 

@@ -68,6 +68,7 @@
   "credit_limit_section",
   "payment_terms",
   "credit_limits",
+  "forma_de_pago_de_cliente",
   "default_receivable_accounts",
   "accounts",
   "loyalty_points_tab",
@@ -597,6 +598,13 @@
    "fieldtype": "Read Only",
    "hidden": 1,
    "label": "Last Name"
+  },
+  {
+   "fieldname": "forma_de_pago_de_cliente",
+   "fieldtype": "Select",
+   "ignore_user_permissions": 1,
+   "label": "Forma de Pago de Cliente",
+   "options": "Tarjeta de Credito\nCheque\nTransferencia"
   }
  ],
  "icon": "fa fa-user",
@@ -610,8 +618,8 @@
    "link_fieldname": "party"
   }
  ],
- "modified": "2025-11-25 09:35:56.772949",
- "modified_by": "Administrator",
+ "modified": "2026-01-15 13:19:55.162950",
+ "modified_by": "padilla.julian@gmail.com",
  "module": "Selling",
  "name": "Customer",
  "naming_rule": "By \"Naming Series\" field",

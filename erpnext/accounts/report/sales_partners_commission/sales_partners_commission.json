@@ -9,8 +9,8 @@
  "filters": [],
  "idx": 6,
  "is_standard": "Yes",
- "letterhead": null,
- "modified": "2025-07-17 23:16:19.892044",
+ "letter_head": null,
+ "modified": "2025-12-17 09:59:35.915638",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Partners Commission",
@@ -26,6 +26,9 @@
   },
   {
    "role": "Accounts User"
+  },
+  {
+   "role": "Auditor"
   }
  ],
  "timeout": 0

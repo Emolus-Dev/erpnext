@@ -17,3 +17,5 @@ __pycache__
 .vscode/
 node_modules/
 .backportrc.json
+erpnext/accounts/doctype/account/chart_of_accounts/verified/gt_emolus_standard_chart_of_accounts.json
+erpnext/accounts/doctype/account/chart_of_accounts/verified/gt_manuchar_chart_of_accounts.json

@@ -44,7 +44,6 @@
   "has_batch_no",
   "column_break_18",
   "batch_size",
-  "required_items_section",
   "materials_and_operations_tab",
   "operations_section",
   "transfer_material_against",
@@ -272,11 +271,6 @@
    "options": "Warehouse"
   },
   {
-   "fieldname": "required_items_section",
-   "fieldtype": "Section Break",
-   "label": "Required Items"
-  },
-  {
    "fieldname": "required_items",
    "fieldtype": "Table",
    "label": "Required Items",
@@ -491,7 +485,8 @@
    "default": "1",
    "fieldname": "update_consumed_material_cost_in_project",
    "fieldtype": "Check",
-   "label": "Update Consumed Material Cost In Project"
+   "label": "Update Consumed Material Cost In Project",
+   "print_hide": 1
   },
   {
    "description": "This is a location where raw materials are available.",
@@ -602,7 +597,7 @@
  "image_field": "image",
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-21 00:55:45.916224",
+ "modified": "2025-12-30 10:48:46.023454",
  "modified_by": "Administrator",
  "module": "Manufacturing",
  "name": "Work Order",
@@ -632,6 +627,7 @@
    "role": "Stock User"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "ASC",
  "states": [],
