@@ -192,8 +192,8 @@
    "type": "Link"
   }
  ],
- "modified": "2023-07-04 14:39:08.935853",
- "modified_by": "Administrator",
+ "modified": "2026-02-06 07:59:53.328802",
+ "modified_by": "padilla.julian@gmail.com",
  "module": "Projects",
  "name": "Projects",
  "number_cards": [],
@@ -203,14 +203,14 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 11.0,
+ "sequence_id": 21.0,
  "shortcuts": [
   {
    "color": "Grey",
    "doc_view": "List",
    "label": "Learn Project Management",
    "type": "URL",
-   "url": "https://school.frappe.io/lms/courses/project-management?utm_source=in_app"
+   "url": "https://frappe.school/courses/project-management?utm_source=in_app"
   },
   {
    "color": "Blue",
@@ -236,6 +236,7 @@
   {
    "label": "Project Billing Summary",
    "link_to": "Project Billing Summary",
+   "report_ref_doctype": "Timesheet",
    "type": "Report"
   },
   {

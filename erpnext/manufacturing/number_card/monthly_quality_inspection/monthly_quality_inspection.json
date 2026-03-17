@@ -3,17 +3,19 @@
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Quality Inspection",
- "filters_json": "[[\"Quality Inspection\",\"docstatus\",\"=\",1],[\"Quality Inspection\",\"creation\",\"between\",[\"2020-06-08\",\"2020-07-08\"]]]",
+ "filters_json": "[[\"Quality Inspection\",\"docstatus\",\"=\",\"1\",false],[\"Quality Inspection\",\"creation\",\"Between\",[\"2026-01-01\",\"2028-04-30\"],false]]",
  "function": "Count",
  "idx": 0,
  "is_public": 1,
  "is_standard": 1,
  "label": "Monthly Quality Inspections",
- "modified": "2020-07-09 12:23:34.838154",
- "modified_by": "Administrator",
+ "modified": "2026-03-11 07:00:15.835536",
+ "modified_by": "bhaidacher@gimsa.com.gt",
  "module": "Manufacturing",
  "name": "Monthly Quality Inspection",
  "owner": "Administrator",
+ "show_full_number": 0,
  "show_percentage_stats": 1,
- "stats_time_interval": "Weekly"
+ "stats_time_interval": "Weekly",
+ "type": "Document Type"
 }

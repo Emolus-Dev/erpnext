@@ -27,29 +27,7 @@ class PromotionalSchemePriceDiscount(Document):
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
-		priority: DF.Literal[
-			"",
-			"1",
-			"2",
-			"3",
-			"4",
-			"5",
-			"6",
-			"7",
-			"8",
-			"9",
-			"10",
-			"11",
-			"12",
-			"13",
-			"14",
-			"15",
-			"16",
-			"17",
-			"18",
-			"19",
-			"20",
-		]
+		priority: DF.Literal["", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
 		rate: DF.Currency
 		rate_or_discount: DF.Literal["", "Rate", "Discount Percentage", "Discount Amount"]
 		rule_description: DF.SmallText

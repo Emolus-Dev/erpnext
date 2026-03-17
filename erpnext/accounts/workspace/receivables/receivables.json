@@ -196,8 +196,8 @@
    "type": "Link"
   }
  ],
- "modified": "2024-01-18 22:11:51.474477",
- "modified_by": "Administrator",
+ "modified": "2026-02-06 07:59:50.623502",
+ "modified_by": "padilla.julian@gmail.com",
  "module": "Accounts",
  "name": "Receivables",
  "number_cards": [],
@@ -207,7 +207,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 4.0,
+ "sequence_id": 6.0,
  "shortcuts": [
   {
    "color": "Grey",
@@ -247,6 +247,7 @@
    "doc_view": "",
    "label": "Accounts Receivable",
    "link_to": "Accounts Receivable",
+   "report_ref_doctype": "Sales Invoice",
    "type": "Report"
   }
  ],

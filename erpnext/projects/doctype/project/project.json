@@ -63,7 +63,12 @@
   "weekly_time_to_send",
   "column_break_45",
   "subject",
-  "message"
+  "message",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_project"
  ],
  "fields": [
   {
@@ -455,18 +460,54 @@
    "fieldtype": "Data",
    "label": "Subject",
    "mandatory_depends_on": "collect_progress"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Project"
+  },
+  {
+   "fieldname": "parent_project",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Project",
+   "options": "Project"
   }
  ],
  "icon": "fa fa-puzzle-piece",
  "idx": 29,
  "index_web_pages_for_search": 1,
+ "is_tree": 1,
  "links": [],
  "max_attachments": 4,
- "modified": "2025-08-21 17:57:58.314809",
+ "modified": "2026-03-06 09:24:33.857955",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Project",
  "naming_rule": "By \"Naming Series\" field",
+ "nsm_parent_field": "parent_project",
  "owner": "Administrator",
  "permissions": [
   {

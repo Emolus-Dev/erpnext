@@ -600,7 +600,6 @@
    "print_hide": 1
   },
   {
-   "default": ":Company",
    "fieldname": "cost_center",
    "fieldtype": "Link",
    "label": "Cost Center",
@@ -952,13 +951,14 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-31 18:51:32.651562",
- "modified_by": "Administrator",
+ "modified": "2026-02-26 13:38:04.490633",
+ "modified_by": "aruiz@triplestela.com",
  "module": "Stock",
  "name": "Delivery Note Item",
  "naming_rule": "Random",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

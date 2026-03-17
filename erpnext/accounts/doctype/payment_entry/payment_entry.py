@@ -2744,6 +2744,168 @@ def get_company_defaults(company):
 	return frappe.get_cached_value("Company", company, fields, as_dict=1)
 
 
+def get_currency_exchange_rate_for_payment(from_currency, to_currency, posting_date=None):
+	posting_date = posting_date or nowdate()
+
+	direct_rate = frappe.get_all(
+		"Currency Exchange",
+		fields=["exchange_rate"],
+		filters={
+			"date": ["<=", getdate(posting_date)],
+			"from_currency": from_currency,
+			"to_currency": to_currency,
+		},
+		order_by="date desc",
+		limit=1,
+	)
+	if direct_rate:
+		return flt(direct_rate[0].exchange_rate)
+
+	inverse_rate = frappe.get_all(
+		"Currency Exchange",
+		fields=["exchange_rate"],
+		filters={
+			"date": ["<=", getdate(posting_date)],
+			"from_currency": to_currency,
+			"to_currency": from_currency,
+		},
+		order_by="date desc",
+		limit=1,
+	)
+	if inverse_rate and flt(inverse_rate[0].exchange_rate):
+		return 1 / flt(inverse_rate[0].exchange_rate)
+
+	return None
+
+
+@frappe.whitelist()
+def convert_payment_amount(from_currency, to_currency, amount, posting_date=None):
+	frappe.has_permission("Payment Entry", throw=True)
+
+	amount = flt(amount)
+	if not (from_currency and to_currency):
+		return amount
+
+	if from_currency == to_currency:
+		return amount
+
+	exchange_rate = get_currency_exchange_rate_for_payment(
+		from_currency, to_currency, posting_date=posting_date
+	)
+	if not exchange_rate:
+		frappe.throw(
+			_("Unable to find Currency Exchange rate for {0} to {1} on or before {2}").format(
+				from_currency, to_currency, getdate(posting_date or nowdate())
+			)
+		)
+
+	return flt(amount * exchange_rate)
+
+
+@frappe.whitelist()
+def recalculate_payment_entry_currency_amounts(
+	company,
+	paid_from_account_currency=None,
+	paid_to_account_currency=None,
+	paid_amount=None,
+	received_amount=None,
+	source_exchange_rate=None,
+	target_exchange_rate=None,
+	base_paid_amount=None,
+	base_received_amount=None,
+	posting_date=None,
+):
+	frappe.has_permission("Payment Entry", throw=True)
+
+	company_currency = frappe.get_cached_value("Company", company, "default_currency")
+	posting_date = posting_date or nowdate()
+
+	paid_amount = flt(paid_amount)
+	received_amount = flt(received_amount)
+	base_paid_amount = flt(base_paid_amount)
+	base_received_amount = flt(base_received_amount)
+
+	if paid_from_account_currency == company_currency:
+		source_exchange_rate = 1
+	elif paid_from_account_currency:
+		source_exchange_rate = get_currency_exchange_rate_for_payment(
+			paid_from_account_currency, company_currency, posting_date=posting_date
+		)
+	else:
+		source_exchange_rate = flt(source_exchange_rate)
+
+	if paid_from_account_currency == paid_to_account_currency:
+		target_exchange_rate = source_exchange_rate
+	elif paid_to_account_currency == company_currency:
+		target_exchange_rate = 1
+	elif paid_to_account_currency:
+		target_exchange_rate = get_currency_exchange_rate_for_payment(
+			paid_to_account_currency, company_currency, posting_date=posting_date
+		)
+	else:
+		target_exchange_rate = flt(target_exchange_rate)
+
+	amount_in_company_currency = None
+
+	if paid_to_account_currency == company_currency and received_amount:
+		amount_in_company_currency = received_amount
+	elif paid_from_account_currency == company_currency and paid_amount:
+		amount_in_company_currency = paid_amount
+	elif base_received_amount:
+		amount_in_company_currency = base_received_amount
+	elif base_paid_amount:
+		amount_in_company_currency = base_paid_amount
+	elif received_amount and target_exchange_rate:
+		amount_in_company_currency = flt(received_amount * target_exchange_rate)
+	elif paid_amount and source_exchange_rate:
+		amount_in_company_currency = flt(paid_amount * source_exchange_rate)
+
+	result = {
+		"source_exchange_rate": flt(source_exchange_rate),
+		"target_exchange_rate": flt(target_exchange_rate),
+	}
+
+	if amount_in_company_currency is None:
+		return result
+
+	if paid_from_account_currency == company_currency:
+		recalculated_paid_amount = flt(amount_in_company_currency)
+	elif paid_from_account_currency:
+		recalculated_paid_amount = convert_payment_amount(
+			company_currency,
+			paid_from_account_currency,
+			amount_in_company_currency,
+			posting_date=posting_date,
+		)
+	else:
+		recalculated_paid_amount = paid_amount
+
+	if paid_to_account_currency == company_currency:
+		recalculated_received_amount = flt(amount_in_company_currency)
+	elif paid_to_account_currency == paid_from_account_currency:
+		recalculated_received_amount = flt(recalculated_paid_amount)
+	elif paid_to_account_currency:
+		recalculated_received_amount = convert_payment_amount(
+			company_currency,
+			paid_to_account_currency,
+			amount_in_company_currency,
+			posting_date=posting_date,
+		)
+	else:
+		recalculated_received_amount = received_amount
+
+	result.update(
+		{
+			"paid_amount": flt(recalculated_paid_amount),
+			"received_amount": flt(recalculated_received_amount),
+			"base_paid_amount": flt(amount_in_company_currency),
+			"base_received_amount": flt(amount_in_company_currency),
+		}
+	)
+
+	return result
+
+
 def get_outstanding_on_journal_entry(voucher_no, party_type, party):
 	ple = frappe.qb.DocType("Payment Ledger Entry")
 

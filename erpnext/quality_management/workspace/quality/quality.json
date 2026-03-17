@@ -144,8 +144,8 @@
    "type": "Link"
   }
  ],
- "modified": "2023-05-24 14:47:22.597974",
- "modified_by": "Administrator",
+ "modified": "2026-02-06 07:59:51.992699",
+ "modified_by": "padilla.julian@gmail.com",
  "module": "Quality Management",
  "name": "Quality",
  "number_cards": [],
@@ -155,7 +155,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 9.0,
+ "sequence_id": 13.0,
  "shortcuts": [
   {
    "color": "Grey",

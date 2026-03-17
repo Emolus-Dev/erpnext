@@ -188,9 +188,29 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Payments",
-   "link_count": 1,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GoCardless Settings",
+   "link_count": 0,
+   "link_to": "GoCardless Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Mpesa Settings",
+   "link_count": 0,
+   "link_to": "Mpesa Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -203,8 +223,8 @@
    "type": "Link"
   }
  ],
- "modified": "2023-08-29 15:48:59.010704",
- "modified_by": "Administrator",
+ "modified": "2026-02-06 07:59:54.910960",
+ "modified_by": "padilla.julian@gmail.com",
  "module": "ERPNext Integrations",
  "name": "ERPNext Integrations",
  "number_cards": [],
@@ -214,7 +234,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 21.0,
+ "sequence_id": 31.0,
  "shortcuts": [
   {
    "color": "Grey",
