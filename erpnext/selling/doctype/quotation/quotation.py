@@ -72,7 +72,6 @@ class Quotation(SellingController):
 		language: DF.Data | None
 		letter_head: DF.Link | None
 		lost_reasons: DF.TableMultiSelect[QuotationLostReasonDetail]
-		motivo_autorizacion_de_reciclaje: DF.Literal["", "Precio de mercado es mas alto", "Bateria usada en buen estado y para reventa", "Cliente estrategico", "Volumen alto de baterias entregadas", "Condicion especial negociada", "Error operativo corregido", "Otro"]
 		named_place: DF.Data | None
 		naming_series: DF.Literal["SAL-QTN-.YYYY.-"]
 		net_total: DF.Currency

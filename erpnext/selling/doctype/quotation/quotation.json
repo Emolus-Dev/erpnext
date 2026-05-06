@@ -23,7 +23,6 @@
   "company",
   "has_unit_price_items",
   "amended_from",
-  "motivo_autorizacion_de_reciclaje",
   "currency_and_price_list",
   "currency",
   "conversion_rate",
@@ -1103,20 +1102,14 @@
    "fieldtype": "Data",
    "is_virtual": 1,
    "label": "Last Scanned Warehouse"
-  },
-  {
-   "fieldname": "motivo_autorizacion_de_reciclaje",
-   "fieldtype": "Select",
-   "label": "Motivo autorizacion de reciclaje",
-   "options": "\nPrecio de mercado es mas alto\nBateria usada en buen estado y para reventa\nCliente estrategico\nVolumen alto de baterias entregadas\nCondicion especial negociada\nError operativo corregido\nOtro"
   }
  ],
  "icon": "fa fa-shopping-cart",
  "idx": 82,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-10 15:27:28.280863",
- "modified_by": "aruiz@triplestela.com",
+ "modified": "2026-03-26 12:15:49.116335",
+ "modified_by": "Administrator",
  "module": "Selling",
  "name": "Quotation",
  "naming_rule": "By \"Naming Series\" field",

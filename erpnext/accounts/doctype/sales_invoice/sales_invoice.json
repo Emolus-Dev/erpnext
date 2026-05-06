@@ -1077,6 +1077,7 @@
    "collapsible": 1,
    "fieldname": "section_break_49",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "hide_days": 1,
    "hide_seconds": 1,
    "label": "Additional Discount"
@@ -1670,6 +1671,7 @@
    "fieldtype": "Select",
    "hide_days": 1,
    "hide_seconds": 1,
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
    "length": 30,
@@ -1977,6 +1979,7 @@
    "description": "Issue a debit note with 0 qty against an existing Sales Invoice",
    "fieldname": "is_debit_note",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Rate Adjustment Entry (Debit Note)"
   },
   {
@@ -2199,7 +2202,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2025-09-09 14:48:59.472826",
+ "modified": "2026-03-24 14:31:39.287475",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",
