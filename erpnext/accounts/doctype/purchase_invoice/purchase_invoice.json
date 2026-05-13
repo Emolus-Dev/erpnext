@@ -390,6 +390,7 @@
   {
    "fieldname": "bill_no",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "label": "Supplier Invoice No",
    "oldfieldname": "bill_no",
    "oldfieldtype": "Data",
@@ -1659,8 +1660,8 @@
  "idx": 204,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-04 19:19:11.380664",
- "modified_by": "Administrator",
+ "modified": "2026-05-07 12:24:06.565247",
+ "modified_by": "aruiz@triplestela.com",
  "module": "Accounts",
  "name": "Purchase Invoice",
  "naming_rule": "By \"Naming Series\" field",
