@@ -25,9 +25,10 @@
    "reqd": 1
   }
  ],
+ "grid_page_length": 50,
  "links": [],
- "modified": "2020-04-26 02:23:53.990322",
- "modified_by": "Administrator",
+ "modified": "2026-05-27 21:18:50.821635",
+ "modified_by": "bhaidacher@gimsa.com.gt",
  "module": "Projects",
  "name": "Project Template",
  "owner": "Administrator",
@@ -46,7 +47,9 @@
   }
  ],
  "quick_entry": 1,
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

@@ -15,11 +15,8 @@ class ProjectTemplate(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from erpnext.projects.doctype.project_template_task.project_template_task import ProjectTemplateTask
 		from frappe.types import DF
-
-		from erpnext.projects.doctype.project_template_task.project_template_task import (
-			ProjectTemplateTask,
-		)
 
 		project_type: DF.Link | None
 		tasks: DF.Table[ProjectTemplateTask]

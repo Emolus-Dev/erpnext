@@ -31,14 +31,11 @@ class Opportunity(TransactionBase, CRMNote):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
-		from frappe.types import DF
-
 		from erpnext.crm.doctype.competitor_detail.competitor_detail import CompetitorDetail
 		from erpnext.crm.doctype.crm_note.crm_note import CRMNote
 		from erpnext.crm.doctype.opportunity_item.opportunity_item import OpportunityItem
-		from erpnext.crm.doctype.opportunity_lost_reason_detail.opportunity_lost_reason_detail import (
-			OpportunityLostReasonDetail,
-		)
+		from erpnext.crm.doctype.opportunity_lost_reason_detail.opportunity_lost_reason_detail import OpportunityLostReasonDetail
+		from frappe.types import DF
 
 		address_display: DF.SmallText | None
 		amended_from: DF.Link | None
@@ -46,20 +43,20 @@ class Opportunity(TransactionBase, CRMNote):
 		base_opportunity_amount: DF.Currency
 		base_total: DF.Currency
 		campaign: DF.Link | None
-		city: DF.Data | None
+		city: DF.Data
 		company: DF.Link
 		competitors: DF.TableMultiSelect[CompetitorDetail]
 		contact_display: DF.SmallText | None
 		contact_email: DF.Data | None
 		contact_mobile: DF.Data | None
-		contact_person: DF.Link | None
+		contact_person: DF.Link
 		conversion_rate: DF.Float
-		country: DF.Link | None
-		currency: DF.Link | None
+		country: DF.Link
+		currency: DF.Link
 		customer_address: DF.Link | None
-		customer_group: DF.Link | None
+		customer_group: DF.Link
 		customer_name: DF.Data | None
-		expected_closing: DF.Date | None
+		expected_closing: DF.Date
 		first_response_time: DF.Duration | None
 		industry: DF.Link | None
 		items: DF.Table[OpportunityItem]
@@ -72,18 +69,18 @@ class Opportunity(TransactionBase, CRMNote):
 		notes: DF.Table[CRMNote]
 		opportunity_amount: DF.Currency
 		opportunity_from: DF.Link
-		opportunity_owner: DF.Link | None
-		opportunity_type: DF.Link | None
+		opportunity_owner: DF.Link
+		opportunity_type: DF.Link
 		order_lost_reason: DF.SmallText | None
 		party_name: DF.DynamicLink
 		phone: DF.Data | None
 		phone_ext: DF.Data | None
 		probability: DF.Percent
-		sales_stage: DF.Link | None
+		sales_stage: DF.Link
 		source: DF.Link | None
-		state: DF.Data | None
+		state: DF.Data
 		status: DF.Literal["Open", "Quotation", "Converted", "Lost", "Replied", "Closed"]
-		territory: DF.Link | None
+		territory: DF.Link
 		title: DF.Data | None
 		total: DF.Currency
 		transaction_date: DF.Date

@@ -158,7 +158,8 @@
    "label": "Opportunity Type",
    "oldfieldname": "enquiry_type",
    "oldfieldtype": "Select",
-   "options": "Opportunity Type"
+   "options": "Opportunity Type",
+   "reqd": 1
   },
   {
    "default": "Open",
@@ -185,7 +186,8 @@
    "fieldname": "expected_closing",
    "fieldtype": "Date",
    "label": "Expected Closing Date",
-   "no_copy": 1
+   "no_copy": 1,
+   "reqd": 1
   },
   {
    "fieldname": "section_break_14",
@@ -196,13 +198,15 @@
    "fieldname": "currency",
    "fieldtype": "Link",
    "label": "Currency",
-   "options": "Currency"
+   "options": "Currency",
+   "reqd": 1
   },
   {
    "fieldname": "opportunity_amount",
    "fieldtype": "Currency",
    "label": "Opportunity Amount",
-   "options": "currency"
+   "options": "currency",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_17",
@@ -213,13 +217,14 @@
    "fieldname": "sales_stage",
    "fieldtype": "Link",
    "label": "Sales Stage",
-   "options": "Sales Stage"
+   "options": "Sales Stage",
+   "reqd": 1
   },
   {
-   "default": "100",
    "fieldname": "probability",
    "fieldtype": "Percent",
-   "label": "Probability (%)"
+   "label": "Probability (%)",
+   "reqd": 1
   },
   {
    "fieldname": "items_section",
@@ -263,10 +268,11 @@
    "label": "Territory",
    "options": "Territory",
    "print_hide": 1,
+   "reqd": 1,
    "search_index": 1
   },
   {
-   "depends_on": "eval:doc.opportunity_from=='Customer' && doc.party_name",
+   "default": "COLOCAR CATEGORIA!",
    "fieldname": "customer_group",
    "fieldtype": "Link",
    "label": "Customer Group",
@@ -274,6 +280,7 @@
    "oldfieldtype": "Link",
    "options": "Customer Group",
    "print_hide": 1,
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -286,7 +293,8 @@
    "fieldtype": "Link",
    "label": "Contact Person",
    "options": "Contact",
-   "print_hide": 1
+   "print_hide": 1,
+   "reqd": 1
   },
   {
    "depends_on": "eval:doc.opportunity_from=='Customer' && doc.party_name",
@@ -404,7 +412,8 @@
    "label": "Opportunity Amount (Company Currency)",
    "options": "Company:company:default_currency",
    "print_hide": 1,
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "section_break_32",
@@ -501,7 +510,8 @@
    "fieldname": "opportunity_owner",
    "fieldtype": "Link",
    "label": "Opportunity Owner",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   },
   {
    "fieldname": "website",
@@ -607,26 +617,29 @@
   {
    "fieldname": "city",
    "fieldtype": "Data",
-   "label": "City"
+   "label": "City",
+   "reqd": 1
   },
   {
    "fieldname": "state",
    "fieldtype": "Data",
-   "label": "State/Province"
+   "label": "State/Province",
+   "reqd": 1
   },
   {
    "fieldname": "country",
    "fieldtype": "Link",
    "label": "Country",
-   "options": "Country"
+   "options": "Country",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "icon": "fa fa-info-sign",
  "idx": 195,
  "links": [],
- "modified": "2025-06-26 11:16:13.665866",
- "modified_by": "Administrator",
+ "modified": "2026-05-21 21:33:30.395690",
+ "modified_by": "padilla.julian@gmail.com",
  "module": "CRM",
  "name": "Opportunity",
  "naming_rule": "By \"Naming Series\" field",
