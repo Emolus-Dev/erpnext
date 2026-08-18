@@ -8,8 +8,57 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 			? this.item.rejected_serial_and_batch_bundle
 			: this.item.serial_and_batch_bundle;
 
-		this.make();
-		this.render_data();
+		if (this.is_purchase_receipt_serial_batch()) {
+			this.setup_purchase_receipt_dialog();
+		} else {
+			this.make();
+			this.render_data();
+		}
+	}
+
+	is_purchase_receipt_serial_batch() {
+		return this.frm?.doc?.doctype === "Purchase Receipt" && !this.item?.is_rejected;
+	}
+
+	setup_purchase_receipt_dialog() {
+		Promise.resolve(this.load_purchase_receipt_uoms()).finally(() => {
+			this.make();
+			this.render_data();
+		});
+	}
+
+	load_purchase_receipt_uoms() {
+		if (!this.item?.item_code) {
+			return Promise.resolve();
+		}
+
+		return frappe.db
+			.get_value("Item", this.item.item_code, ["purchase_uom", "stock_uom"])
+			.then((r) => {
+				this.stock_uom = r.message?.stock_uom;
+				this.purchase_uom = r.message?.purchase_uom || this.stock_uom;
+				return this.get_pr_conversion_factor();
+			})
+			.then((conversion_factor) => {
+				this.pr_conversion_factor = conversion_factor;
+			});
+	}
+
+	get_pr_conversion_factor() {
+		const uom = this.purchase_uom || this.stock_uom;
+		if (!this.item?.item_code || !uom) {
+			return Promise.resolve(1);
+		}
+
+		return frappe
+			.call({
+				method: "erpnext.stock.get_item_details.get_conversion_factor",
+				args: {
+					item_code: this.item.item_code,
+					uom: uom,
+				},
+			})
+			.then((r) => flt(r.message?.conversion_factor) || 1);
 	}
 
 	make() {
@@ -24,7 +73,7 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 
 		this.dialog = new frappe.ui.Dialog({
 			title: this.item?.title || primary_label,
-			size: "large",
+			size: this.is_purchase_receipt_serial_batch() ? "extra-large" : "large",
 			fields: this.get_dialog_fields(),
 			primary_action_label: primary_label,
 			primary_action: () => this.update_bundle_entries(),
@@ -49,10 +98,15 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 					let serial_nos = this.item.serial_no.split("\n");
 					if (serial_nos.length > 1) {
 						serial_nos.forEach((serial_no) => {
-							this.dialog.fields_dict.entries.df.data.push({
+							let row = {
 								serial_no: serial_no,
 								batch_no: this.item.batch_no,
-							});
+							};
+							if (this.is_purchase_receipt_serial_batch()) {
+								row.qty = 1;
+								this.apply_purchase_receipt_fields_to_row(row);
+							}
+							this.dialog.fields_dict.entries.df.data.push(row);
 						});
 					} else {
 						this.dialog.set_value("scan_serial_no", this.item.serial_no);
@@ -491,6 +545,10 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 
 		fields = [...fields, ...batch_fields];
 
+		if (this.is_purchase_receipt_serial_batch()) {
+			fields = this.append_purchase_receipt_entry_fields(fields);
+		}
+
 		fields.push({
 			fieldtype: "Data",
 			fieldname: "name",
@@ -499,6 +557,111 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 		});
 
 		return fields;
+	}
+
+	append_purchase_receipt_entry_fields(fields) {
+		let me = this;
+		let qty_field = fields.find((field) => field.fieldname === "qty");
+
+		if (qty_field) {
+			qty_field.onchange = function (e) {
+				me.convert_pr_entry_qty(me.get_dialog_row_doc(this, e), "qty");
+			};
+		}
+
+		fields.push(
+			{
+				fieldtype: "Link",
+				options: "UOM",
+				fieldname: "stock_uom",
+				label: __("Stock UOM"),
+				in_list_view: 1,
+				read_only: 1,
+				default: this.stock_uom,
+			},
+			{
+				fieldtype: "Float",
+				fieldname: "received_qty",
+				label: __("Received Qty"),
+				in_list_view: 1,
+				onchange(e) {
+					me.convert_pr_entry_qty(me.get_dialog_row_doc(this, e), "received_qty");
+				},
+			},
+			{
+				fieldtype: "Link",
+				options: "UOM",
+				fieldname: "received_uom",
+				label: __("Received UOM"),
+				in_list_view: 1,
+				read_only: 1,
+				default: this.purchase_uom || this.stock_uom,
+			}
+		);
+
+		if (!qty_field) {
+			fields.push({
+				fieldtype: "Float",
+				fieldname: "qty",
+				label: __("Quantity"),
+				in_list_view: 1,
+				onchange(e) {
+					me.convert_pr_entry_qty(me.get_dialog_row_doc(this, e), "qty");
+				},
+			});
+		}
+
+		return fields;
+	}
+
+	apply_purchase_receipt_fields_to_row(row, force_received_qty = false) {
+		if (!this.is_purchase_receipt_serial_batch() || !row) {
+			return row;
+		}
+
+		const conversion_factor = flt(this.pr_conversion_factor) || 1;
+		row.received_uom = this.purchase_uom || this.stock_uom;
+		row.stock_uom = this.stock_uom;
+
+		if (flt(row.qty) && (force_received_qty || !flt(row.received_qty))) {
+			row.received_qty = conversion_factor ? flt(row.qty) / conversion_factor : flt(row.qty);
+		}
+
+		return row;
+	}
+
+	get_dialog_row_doc(control, e) {
+		let grid_row = e?.target ? $(e.target).closest(".grid-row").data("grid_row") : null;
+		return grid_row?.doc || control.doc;
+	}
+
+	convert_pr_entry_qty(row, source_field) {
+		if (!row || row._pr_converting) {
+			return;
+		}
+
+		row._pr_converting = true;
+
+		Promise.resolve(this.get_pr_conversion_factor())
+			.then((conversion_factor) => {
+				this.pr_conversion_factor = flt(conversion_factor) || 1;
+				const factor = this.pr_conversion_factor;
+				const grid = this.dialog.fields_dict.entries.grid;
+
+				row.received_uom = this.purchase_uom || this.stock_uom;
+				row.stock_uom = this.stock_uom;
+
+				if (source_field === "qty") {
+					row.received_qty = factor ? flt(row.qty) / factor : flt(row.qty);
+				} else {
+					row.qty = flt(row.received_qty) * factor;
+				}
+
+				grid.refresh();
+			})
+			.finally(() => {
+				row._pr_converting = false;
+			});
 	}
 
 	include_expired_batches() {
@@ -546,6 +709,9 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 				},
 				callback: (r) => {
 					if (r.message) {
+						if (this.is_purchase_receipt_serial_batch()) {
+							r.message.forEach((d) => this.apply_purchase_receipt_fields_to_row(d, true));
+						}
 						this.dialog.fields_dict.entries.df.data = r.message;
 						this.dialog.fields_dict.entries.grid.refresh();
 					}
@@ -590,9 +756,13 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 			}
 
 			if (!this.item.has_batch_no) {
-				this.dialog.fields_dict.entries.df.data.push({
-					serial_no: scan_serial_no,
-				});
+				let row = { serial_no: scan_serial_no };
+				if (this.is_purchase_receipt_serial_batch()) {
+					row.qty = 1;
+				}
+				this.dialog.fields_dict.entries.df.data.push(
+					this.apply_purchase_receipt_fields_to_row(row)
+				);
 
 				this.dialog.fields_dict.scan_serial_no.set_value("");
 			} else {
@@ -602,10 +772,16 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 						serial_no: scan_serial_no,
 					},
 					callback: (r) => {
-						this.dialog.fields_dict.entries.df.data.push({
+						let row = {
 							serial_no: scan_serial_no,
 							batch_no: r.message,
-						});
+						};
+						if (this.is_purchase_receipt_serial_batch()) {
+							row.qty = 1;
+						}
+						this.dialog.fields_dict.entries.df.data.push(
+							this.apply_purchase_receipt_fields_to_row(row)
+						);
 
 						this.dialog.fields_dict.scan_serial_no.set_value("");
 						this.dialog.fields_dict.entries.grid.refresh();
@@ -621,11 +797,14 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 
 			if (existing_row?.length) {
 				existing_row[0].qty += 1;
+				this.apply_purchase_receipt_fields_to_row(existing_row[0], true);
 			} else {
-				this.dialog.fields_dict.entries.df.data.push({
-					batch_no: scan_batch_no,
-					qty: 1,
-				});
+				this.dialog.fields_dict.entries.df.data.push(
+					this.apply_purchase_receipt_fields_to_row({
+						batch_no: scan_batch_no,
+						qty: 1,
+					})
+				);
 			}
 
 			this.dialog.fields_dict.scan_batch_no.set_value("");
@@ -730,6 +909,9 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 		data.forEach((d) => {
 			d.qty = Math.abs(d.qty);
 			d.name = d.child_row || d.name;
+			if (this.is_purchase_receipt_serial_batch()) {
+				this.apply_purchase_receipt_fields_to_row(d);
+			}
 			this.dialog.fields_dict.entries.df.data.push(d);
 		});
 
