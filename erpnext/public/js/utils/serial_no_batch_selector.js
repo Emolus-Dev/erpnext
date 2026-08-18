@@ -7,45 +7,63 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 		this.bundle = this.item?.is_rejected
 			? this.item.rejected_serial_and_batch_bundle
 			: this.item.serial_and_batch_bundle;
+		this.uom_config = this.get_uom_conversion_config();
 
-		if (this.is_purchase_receipt_serial_batch()) {
-			this.setup_purchase_receipt_dialog();
+		if (this.uom_config) {
+			this.setup_uom_conversion_dialog();
 		} else {
 			this.make();
 			this.render_data();
 		}
 	}
 
-	is_purchase_receipt_serial_batch() {
-		return this.frm?.doc?.doctype === "Purchase Receipt" && !this.item?.is_rejected;
+	get_uom_conversion_config() {
+		if (this.item?.is_rejected) {
+			return null;
+		}
+
+		const configs = {
+			"Purchase Receipt": {
+				item_uom_field: "purchase_uom",
+				qty_label: __("Received Qty"),
+				uom_label: __("Received UOM"),
+			},
+			"Delivery Note": {
+				item_uom_field: "sales_uom",
+				qty_label: __("Delivered Qty"),
+				uom_label: __("Delivered UOM"),
+			},
+		};
+
+		return configs[this.frm?.doc?.doctype] || null;
 	}
 
-	setup_purchase_receipt_dialog() {
-		Promise.resolve(this.load_purchase_receipt_uoms()).finally(() => {
+	setup_uom_conversion_dialog() {
+		Promise.resolve(this.load_transaction_uoms()).finally(() => {
 			this.make();
 			this.render_data();
 		});
 	}
 
-	load_purchase_receipt_uoms() {
+	load_transaction_uoms() {
 		if (!this.item?.item_code) {
 			return Promise.resolve();
 		}
 
 		return frappe.db
-			.get_value("Item", this.item.item_code, ["purchase_uom", "stock_uom"])
+			.get_value("Item", this.item.item_code, [this.uom_config.item_uom_field, "stock_uom"])
 			.then((r) => {
 				this.stock_uom = r.message?.stock_uom;
-				this.purchase_uom = r.message?.purchase_uom || this.stock_uom;
-				return this.get_pr_conversion_factor();
+				this.transaction_uom = r.message?.[this.uom_config.item_uom_field] || this.stock_uom;
+				return this.get_uom_conversion_factor();
 			})
 			.then((conversion_factor) => {
-				this.pr_conversion_factor = conversion_factor;
+				this.uom_conversion_factor = conversion_factor;
 			});
 	}
 
-	get_pr_conversion_factor() {
-		const uom = this.purchase_uom || this.stock_uom;
+	get_uom_conversion_factor() {
+		const uom = this.transaction_uom || this.stock_uom;
 		if (!this.item?.item_code || !uom) {
 			return Promise.resolve(1);
 		}
@@ -73,7 +91,7 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 
 		this.dialog = new frappe.ui.Dialog({
 			title: this.item?.title || primary_label,
-			size: this.is_purchase_receipt_serial_batch() ? "extra-large" : "large",
+			size: this.uom_config ? "extra-large" : "large",
 			fields: this.get_dialog_fields(),
 			primary_action_label: primary_label,
 			primary_action: () => this.update_bundle_entries(),
@@ -102,9 +120,9 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 								serial_no: serial_no,
 								batch_no: this.item.batch_no,
 							};
-							if (this.is_purchase_receipt_serial_batch()) {
+							if (this.uom_config) {
 								row.qty = 1;
-								this.apply_purchase_receipt_fields_to_row(row);
+								this.apply_uom_fields_to_row(row);
 							}
 							this.dialog.fields_dict.entries.df.data.push(row);
 						});
@@ -545,8 +563,8 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 
 		fields = [...fields, ...batch_fields];
 
-		if (this.is_purchase_receipt_serial_batch()) {
-			fields = this.append_purchase_receipt_entry_fields(fields);
+		if (this.uom_config) {
+			fields = this.append_uom_conversion_entry_fields(fields);
 		}
 
 		fields.push({
@@ -559,13 +577,13 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 		return fields;
 	}
 
-	append_purchase_receipt_entry_fields(fields) {
+	append_uom_conversion_entry_fields(fields) {
 		let me = this;
 		let qty_field = fields.find((field) => field.fieldname === "qty");
 
 		if (qty_field) {
 			qty_field.onchange = function (e) {
-				me.convert_pr_entry_qty(me.get_dialog_row_doc(this, e), "qty");
+				me.convert_entry_qty(me.get_dialog_row_doc(this, e), "qty");
 			};
 		}
 
@@ -582,20 +600,20 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 			{
 				fieldtype: "Float",
 				fieldname: "received_qty",
-				label: __("Received Qty"),
+				label: this.uom_config.qty_label,
 				in_list_view: 1,
 				onchange(e) {
-					me.convert_pr_entry_qty(me.get_dialog_row_doc(this, e), "received_qty");
+					me.convert_entry_qty(me.get_dialog_row_doc(this, e), "received_qty");
 				},
 			},
 			{
 				fieldtype: "Link",
 				options: "UOM",
 				fieldname: "received_uom",
-				label: __("Received UOM"),
+				label: this.uom_config.uom_label,
 				in_list_view: 1,
 				read_only: 1,
-				default: this.purchase_uom || this.stock_uom,
+				default: this.transaction_uom || this.stock_uom,
 			}
 		);
 
@@ -606,7 +624,7 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 				label: __("Quantity"),
 				in_list_view: 1,
 				onchange(e) {
-					me.convert_pr_entry_qty(me.get_dialog_row_doc(this, e), "qty");
+					me.convert_entry_qty(me.get_dialog_row_doc(this, e), "qty");
 				},
 			});
 		}
@@ -614,13 +632,13 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 		return fields;
 	}
 
-	apply_purchase_receipt_fields_to_row(row, force_received_qty = false) {
-		if (!this.is_purchase_receipt_serial_batch() || !row) {
+	apply_uom_fields_to_row(row, force_received_qty = false) {
+		if (!this.uom_config || !row) {
 			return row;
 		}
 
-		const conversion_factor = flt(this.pr_conversion_factor) || 1;
-		row.received_uom = this.purchase_uom || this.stock_uom;
+		const conversion_factor = flt(this.uom_conversion_factor) || 1;
+		row.received_uom = this.transaction_uom || this.stock_uom;
 		row.stock_uom = this.stock_uom;
 
 		if (flt(row.qty) && (force_received_qty || !flt(row.received_qty))) {
@@ -635,20 +653,20 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 		return grid_row?.doc || control.doc;
 	}
 
-	convert_pr_entry_qty(row, source_field) {
-		if (!row || row._pr_converting) {
+	convert_entry_qty(row, source_field) {
+		if (!row || row._uom_converting) {
 			return;
 		}
 
-		row._pr_converting = true;
+		row._uom_converting = true;
 
-		Promise.resolve(this.get_pr_conversion_factor())
+		Promise.resolve(this.get_uom_conversion_factor())
 			.then((conversion_factor) => {
-				this.pr_conversion_factor = flt(conversion_factor) || 1;
-				const factor = this.pr_conversion_factor;
+				this.uom_conversion_factor = flt(conversion_factor) || 1;
+				const factor = this.uom_conversion_factor;
 				const grid = this.dialog.fields_dict.entries.grid;
 
-				row.received_uom = this.purchase_uom || this.stock_uom;
+				row.received_uom = this.transaction_uom || this.stock_uom;
 				row.stock_uom = this.stock_uom;
 
 				if (source_field === "qty") {
@@ -660,7 +678,7 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 				grid.refresh();
 			})
 			.finally(() => {
-				row._pr_converting = false;
+				row._uom_converting = false;
 			});
 	}
 
@@ -709,8 +727,8 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 				},
 				callback: (r) => {
 					if (r.message) {
-						if (this.is_purchase_receipt_serial_batch()) {
-							r.message.forEach((d) => this.apply_purchase_receipt_fields_to_row(d, true));
+						if (this.uom_config) {
+							r.message.forEach((d) => this.apply_uom_fields_to_row(d, true));
 						}
 						this.dialog.fields_dict.entries.df.data = r.message;
 						this.dialog.fields_dict.entries.grid.refresh();
@@ -757,11 +775,11 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 
 			if (!this.item.has_batch_no) {
 				let row = { serial_no: scan_serial_no };
-				if (this.is_purchase_receipt_serial_batch()) {
+				if (this.uom_config) {
 					row.qty = 1;
 				}
 				this.dialog.fields_dict.entries.df.data.push(
-					this.apply_purchase_receipt_fields_to_row(row)
+					this.apply_uom_fields_to_row(row)
 				);
 
 				this.dialog.fields_dict.scan_serial_no.set_value("");
@@ -776,11 +794,11 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 							serial_no: scan_serial_no,
 							batch_no: r.message,
 						};
-						if (this.is_purchase_receipt_serial_batch()) {
+						if (this.uom_config) {
 							row.qty = 1;
 						}
 						this.dialog.fields_dict.entries.df.data.push(
-							this.apply_purchase_receipt_fields_to_row(row)
+							this.apply_uom_fields_to_row(row)
 						);
 
 						this.dialog.fields_dict.scan_serial_no.set_value("");
@@ -797,10 +815,10 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 
 			if (existing_row?.length) {
 				existing_row[0].qty += 1;
-				this.apply_purchase_receipt_fields_to_row(existing_row[0], true);
+				this.apply_uom_fields_to_row(existing_row[0], true);
 			} else {
 				this.dialog.fields_dict.entries.df.data.push(
-					this.apply_purchase_receipt_fields_to_row({
+					this.apply_uom_fields_to_row({
 						batch_no: scan_batch_no,
 						qty: 1,
 					})
@@ -909,8 +927,8 @@ erpnext.SerialBatchPackageSelector = class SerialNoBatchBundleUpdate {
 		data.forEach((d) => {
 			d.qty = Math.abs(d.qty);
 			d.name = d.child_row || d.name;
-			if (this.is_purchase_receipt_serial_batch()) {
-				this.apply_purchase_receipt_fields_to_row(d);
+			if (this.uom_config) {
+				this.apply_uom_fields_to_row(d);
 			}
 			this.dialog.fields_dict.entries.df.data.push(d);
 		});
