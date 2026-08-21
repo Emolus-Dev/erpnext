@@ -7,9 +7,17 @@
   {
    "chart_name": "Valor OC Pendiente por Proveedor",
    "label": "Valor OC Pendiente por Proveedor"
+  },
+  {
+   "chart_name": "OC por Recibir por Responsable",
+   "label": "OC por Recibir por Responsable"
+  },
+  {
+   "chart_name": "OC por Facturar por Responsable",
+   "label": "OC por Facturar por Responsable"
   }
  ],
- "content": "[{\"id\":\"pdc_nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"OC Sin Recibir\",\"col\":3}},{\"id\":\"pdc_nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"OC Recibida Parcialmente\",\"col\":3}},{\"id\":\"pdc_nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Solicitudes de Compra Pendientes\",\"col\":3}},{\"id\":\"pdc_nc4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Purchase Orders to Receive\",\"col\":3}},{\"id\":\"pdc_nc5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Purchase Orders to Bill\",\"col\":3}},{\"id\":\"RrWFEi4kCf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"RFIakryyJP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":3}},{\"id\":\"bM10abFmf6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order\",\"col\":3}},{\"id\":\"oN7lXSwQji\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Ivw1PI_wEJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"lR0Hw_37Pu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Analytics\",\"col\":3}},{\"id\":\"_HN0Ljw1lX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order Analysis\",\"col\":3}},{\"id\":\"kuLuiMRdnX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"tQFeiKptW2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Learn Procurement\",\"col\":3}},{\"id\":\"0NiuFE_EGS\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pdc_header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Panel de Compras</b></span>\",\"col\":12}},{\"id\":\"pdc_ch1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"OC Pendientes por Proveedor\",\"col\":6}},{\"id\":\"pdc_ch2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Valor OC Pendiente por Proveedor\",\"col\":6}},{\"id\":\"Xe2GVLOq8J\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"QwqyG6XuUt\",\"type\":\"card\",\"data\":{\"card_name\":\"Buying\",\"col\":4}},{\"id\":\"bTPjOxC_N_\",\"type\":\"card\",\"data\":{\"card_name\":\"Items & Pricing\",\"col\":4}},{\"id\":\"87ht0HIneb\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"EDOsBOmwgw\",\"type\":\"card\",\"data\":{\"card_name\":\"Supplier\",\"col\":4}},{\"id\":\"oWNNIiNb2i\",\"type\":\"card\",\"data\":{\"card_name\":\"Supplier Scorecard\",\"col\":4}},{\"id\":\"7F_13-ihHB\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"pfwiLvionl\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"rO1A7Om155\",\"type\":\"chart\",\"data\":{\"chart_name\":\"OC por Recibir por Responsable\",\"col\":6}},{\"id\":\"0N9WwyJV0V\",\"type\":\"chart\",\"data\":{\"chart_name\":\"OC por Facturar por Responsable\",\"col\":6}},{\"id\":\"Ivw1PI_wEJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"yvdoL4D7zL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"OC Pendientes por Responsable\",\"col\":3}},{\"id\":\"uohaSw4qes\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"OC Pendientes por Responsable - Detalle\",\"col\":3}},{\"id\":\"bM10abFmf6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order\",\"col\":3}},{\"id\":\"lR0Hw_37Pu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Analytics\",\"col\":3}},{\"id\":\"_HN0Ljw1lX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order Analysis\",\"col\":3}},{\"id\":\"kuLuiMRdnX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"tQFeiKptW2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Learn Procurement\",\"col\":3}},{\"id\":\"oN7lXSwQji\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pdc_nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"OC Sin Recibir\",\"col\":3}},{\"id\":\"pdc_nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"OC Recibida Parcialmente\",\"col\":3}},{\"id\":\"pdc_nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Solicitudes de Compra Pendientes\",\"col\":3}},{\"id\":\"pdc_nc4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Purchase Orders to Receive\",\"col\":3}},{\"id\":\"pdc_nc5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Purchase Orders to Bill\",\"col\":3}},{\"id\":\"88ZwGQZMMi\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Traslados a Instalaci\u00f3n Pendientes\",\"col\":3}},{\"id\":\"Wq1phP4SCp\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"OP Esperando Traslado de Material\",\"col\":3}},{\"id\":\"7wXPLJoItt\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Traslados a Producci\u00f3n en Borrador\",\"col\":3}},{\"id\":\"RrWFEi4kCf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"RFIakryyJP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":3}},{\"id\":\"0NiuFE_EGS\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pdc_header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Panel de Compras</b></span>\",\"col\":12}},{\"id\":\"pdc_ch1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"OC Pendientes por Proveedor\",\"col\":6}},{\"id\":\"pdc_ch2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Valor OC Pendiente por Proveedor\",\"col\":6}},{\"id\":\"Xe2GVLOq8J\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"QwqyG6XuUt\",\"type\":\"card\",\"data\":{\"card_name\":\"Buying\",\"col\":4}},{\"id\":\"bTPjOxC_N_\",\"type\":\"card\",\"data\":{\"card_name\":\"Items & Pricing\",\"col\":4}},{\"id\":\"87ht0HIneb\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"EDOsBOmwgw\",\"type\":\"card\",\"data\":{\"card_name\":\"Supplier\",\"col\":4}},{\"id\":\"oWNNIiNb2i\",\"type\":\"card\",\"data\":{\"card_name\":\"Supplier Scorecard\",\"col\":4}},{\"id\":\"7F_13-ihHB\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}},{\"id\":\"pfwiLvionl\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
  "creation": "2020-01-28 11:50:26.195467",
  "custom_blocks": [],
  "docstatus": 0,
@@ -507,7 +515,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-05-29 06:46:21.014351",
+ "modified": "2026-08-11 10:28:47.157245",
  "modified_by": "bhaidacher@gimsa.com.gt",
  "module": "Buying",
  "name": "Buying",
@@ -531,6 +539,18 @@
   {
    "label": "Purchase Orders to Bill",
    "number_card_name": "Purchase Orders to Bill"
+  },
+  {
+   "label": "Traslados a Instalaci\u00f3n Pendientes",
+   "number_card_name": "Traslados de Material Pendientes"
+  },
+  {
+   "label": "OP Esperando Traslado de Material",
+   "number_card_name": "OP Esperando Traslado de Material"
+  },
+  {
+   "label": "Traslados a Producci\u00f3n en Borrador",
+   "number_card_name": "Traslados a Producci\u00f3n en Borrador"
   }
  ],
  "owner": "Administrator",
@@ -539,7 +559,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 8.0,
+ "sequence_id": 18.0,
  "shortcuts": [
   {
    "color": "Green",
@@ -588,6 +608,20 @@
    "label": "Dashboard",
    "link_to": "Buying",
    "type": "Dashboard"
+  },
+  {
+   "doc_view": "",
+   "label": "OC Pendientes por Responsable",
+   "link_to": "OC Pendientes por Responsable",
+   "report_ref_doctype": "Purchase Order",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "OC Pendientes por Responsable - Detalle",
+   "link_to": "OC Pendientes por Responsable - Detalle",
+   "report_ref_doctype": "Purchase Order",
+   "type": "Report"
   }
  ],
  "title": "Buying"

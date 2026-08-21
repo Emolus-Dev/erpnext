@@ -291,7 +291,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-03-11 06:51:19.938369",
+ "modified": "2026-08-11 10:28:48.274605",
  "modified_by": "bhaidacher@gimsa.com.gt",
  "module": "CRM",
  "name": "CRM",
@@ -302,7 +302,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 7.0,
+ "sequence_id": 23.0,
  "shortcuts": [
   {
    "color": "Grey",

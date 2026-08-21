@@ -222,6 +222,8 @@ def validate_expense_against_budget(args, expense_amount=0):
 
 def validate_budget_records(args, budget_records, expense_amount):
 	for budget in budget_records:
+		if budget.budget_against != args.get("project"):
+			continue
 		if flt(budget.budget_amount):
 			yearly_action, monthly_action = get_actions(args, budget)
 			args["for_material_request"] = budget.for_material_request
