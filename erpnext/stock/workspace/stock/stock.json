@@ -779,8 +779,8 @@
    "type": "Link"
   }
  ],
- "modified": "2026-08-12 16:51:51.767718",
- "modified_by": "padilla.julian@gmail.com",
+ "modified": "2026-10-14 16:54:39.602879",
+ "modified_by": "bhaidacher@gimsa.com.gt",
  "module": "Stock",
  "name": "Stock",
  "number_cards": [
@@ -798,12 +798,12 @@
   }
  ],
  "owner": "padilla.julian@gmail.com",
- "parent_page": "",
+ "parent_page": "Manufacturing",
  "public": 1,
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 10.0,
+ "sequence_id": 21.0,
  "shortcuts": [
   {
    "color": "Green",

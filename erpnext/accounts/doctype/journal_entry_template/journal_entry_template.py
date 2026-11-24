@@ -13,33 +13,16 @@ class JournalEntryTemplate(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from erpnext.accounts.doctype.journal_entry_template_account.journal_entry_template_account import JournalEntryTemplateAccount
 		from frappe.types import DF
-
-		from erpnext.accounts.doctype.journal_entry_template_account.journal_entry_template_account import (
-			JournalEntryTemplateAccount,
-		)
 
 		accounts: DF.Table[JournalEntryTemplateAccount]
 		company: DF.Link
 		is_opening: DF.Literal["No", "Yes"]
 		multi_currency: DF.Check
-		naming_series: DF.Literal
+		naming_series: DF.Literal[None]
 		template_title: DF.Data
-		voucher_type: DF.Literal[
-			"Journal Entry",
-			"Inter Company Journal Entry",
-			"Bank Entry",
-			"Cash Entry",
-			"Credit Card Entry",
-			"Debit Note",
-			"Credit Note",
-			"Contra Entry",
-			"Excise Entry",
-			"Write Off Entry",
-			"Opening Entry",
-			"Depreciation Entry",
-			"Exchange Rate Revaluation",
-		]
+		voucher_type: DF.Literal["Journal Entry", "Inter Company Journal Entry", "Bank Entry", "Cash Entry", "Credit Card Entry", "Debit Note", "Credit Note", "Contra Entry", "Excise Entry", "Write Off Entry", "Opening Entry", "Depreciation Entry", "Exchange Rate Revaluation"]
 	# end: auto-generated types
 
 	pass

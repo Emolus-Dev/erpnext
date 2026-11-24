@@ -30,6 +30,7 @@ def create_charts(
 					"is_group",
 					"tax_rate",
 					"account_currency",
+					"default",
 				]:
 					account_number = cstr(child.get("account_number")).strip()
 					account_name, account_name_in_db = add_suffix_if_duplicate(
@@ -106,6 +107,7 @@ def identify_is_group(child):
 				"tax_rate",
 				"account_number",
 				"account_currency",
+				"default",
 			]
 		)
 	):

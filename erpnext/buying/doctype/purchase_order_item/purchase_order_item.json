@@ -470,6 +470,7 @@
    "print_hide": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "material_request",
    "fieldtype": "Link",
    "label": "Material Request",
@@ -504,6 +505,7 @@
    "no_copy": 1,
    "options": "Sales Order",
    "print_hide": 1,
+   "read_only": 1,
    "search_index": 1
   },
   {
@@ -934,8 +936,8 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-13 17:27:44.468602",
- "modified_by": "Administrator",
+ "modified": "2026-10-17 21:05:13.002840",
+ "modified_by": "aruiz@triplestela.com",
  "module": "Buying",
  "name": "Purchase Order Item",
  "naming_rule": "Random",

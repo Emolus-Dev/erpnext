@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_rename": 1,
  "autoname": "field:template_title",
  "creation": "2020-04-09 01:32:51.332301",
  "doctype": "DocType",
@@ -85,9 +86,10 @@
    "label": "Multi Currency"
   }
  ],
+ "grid_page_length": 50,
  "links": [],
- "modified": "2020-05-01 18:32:01.420488",
- "modified_by": "Administrator",
+ "modified": "2026-11-03 13:18:53.232119",
+ "modified_by": "aruiz@triplestela.com",
  "module": "Accounts",
  "name": "Journal Entry Template",
  "owner": "Administrator",
@@ -126,9 +128,11 @@
    "share": 1
   }
  ],
+ "row_format": "Dynamic",
  "search_fields": "voucher_type, company",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "template_title",
  "track_changes": 1
 }

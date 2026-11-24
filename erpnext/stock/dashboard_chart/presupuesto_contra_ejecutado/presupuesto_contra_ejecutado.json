@@ -1,0 +1,39 @@
+{
+ "chart_name": "presupuesto contra ejecutado",
+ "chart_type": "Report",
+ "creation": "2026-10-22 15:30:39.330354",
+ "currency": "GTQ",
+ "custom_options": "{\"x_field\": \"item_group\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"y_field\": \"budget\", \"color\": \"#CB2929\", \"name\": \"row 1\", \"__checked\": 0}, {\"idx\": 2, \"__islocal\": true, \"y_field\": \"executed\", \"color\": \"#29CD42\", \"name\": \"row 2\"}], \"y_fields\": [\"budget\", \"executed\"], \"colors\": [\"#CB2929\", \"#29CD42\"]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{\"company\":\"JOS\u00c9 RAFAEL CRUZ QUEZADA\",\"customer\":\"AGRICOLA SAN LUIS SOCIEDAD ANONIMA\",\"project\":\"BODEGAS SAN ANDRES ITZAPA\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2026-10-22 15:30:39.671380",
+ "modified_by": "proyectos@capcentroamerica.com",
+ "module": "Stock",
+ "name": "presupuesto contra ejecutado",
+ "number_of_groups": 0,
+ "owner": "proyectos@capcentroamerica.com",
+ "report_name": "Presupuesto de Terceros",
+ "roles": [],
+ "show_values_over_chart": 0,
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "item_group",
+ "y_axis": [
+  {
+   "color": "#CB2929",
+   "y_field": "budget"
+  },
+  {
+   "color": "#29CD42",
+   "y_field": "executed"
+  }
+ ]
+}

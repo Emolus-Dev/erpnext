@@ -139,7 +139,6 @@
    "no_copy": 1,
    "options": "reference_doctype",
    "print_hide": 1,
-   "read_only": 1,
    "search_index": 1
   },
   {
@@ -449,8 +448,8 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-29 11:52:48.555415",
- "modified_by": "Administrator",
+ "modified": "2026-10-28 08:00:53.771433",
+ "modified_by": "aruiz@triplestela.com",
  "module": "Accounts",
  "name": "Payment Request",
  "naming_rule": "By \"Naming Series\" field",

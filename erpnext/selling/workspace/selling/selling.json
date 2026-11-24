@@ -5,9 +5,14 @@
    "label": "Sales Order Trends"
   }
  ],
- "content": "[{\"id\":\"vBSf8Vi9U8\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Order Trends\",\"col\":12}},{\"id\":\"aW2i5R5GRP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"1it3dCOnm6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Acceso r\u00e1pido</b></span>\",\"col\":12}},{\"id\":\"x7pLl-spS4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"SSGrXWmY-H\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"-5J_yLxDaS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Analytics\",\"col\":3}},{\"id\":\"c_GjZuZ2oN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"mX-9DJSyT2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Learn Sales Management\",\"col\":3}},{\"id\":\"KHVhAQnb5J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Punto de Venta\",\"col\":3}},{\"id\":\"oNjjNbnUHp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0BcePLg0g1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Informes &amp; Datos Maestros</b></span>\",\"col\":12}},{\"id\":\"uze5dJ1ipL\",\"type\":\"card\",\"data\":{\"card_name\":\"Selling\",\"col\":4}},{\"id\":\"3j2fYwMAkq\",\"type\":\"card\",\"data\":{\"card_name\":\"Point of Sale\",\"col\":4}},{\"id\":\"xImm8NepFt\",\"type\":\"card\",\"data\":{\"card_name\":\"Items and Pricing\",\"col\":4}},{\"id\":\"6MjIe7KCQo\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"lBu2EKgmJF\",\"type\":\"card\",\"data\":{\"card_name\":\"Reportes clave\",\"col\":4}},{\"id\":\"1ARHrjg4kI\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
+ "content": "[{\"id\": \"gisaCosteoVig\", \"type\": \"custom_block\", \"data\": {\"custom_block_name\": \"Costeo Estandar Vigente\", \"col\": 12}}, {\"id\": \"vBSf8Vi9U8\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Sales Order Trends\", \"col\": 12}}, {\"id\": \"aW2i5R5GRP\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"1it3dCOnm6\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Acceso r\\u00e1pido</b></span>\", \"col\": 12}}, {\"id\": \"x7pLl-spS4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Item\", \"col\": 3}}, {\"id\": \"SSGrXWmY-H\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Order\", \"col\": 3}}, {\"id\": \"-5J_yLxDaS\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Analytics\", \"col\": 3}}, {\"id\": \"c_GjZuZ2oN\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Dashboard\", \"col\": 3}}, {\"id\": \"mX-9DJSyT2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Learn Sales Management\", \"col\": 3}}, {\"id\": \"KHVhAQnb5J\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Punto de Venta\", \"col\": 3}}, {\"id\": \"oNjjNbnUHp\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"0BcePLg0g1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Informes &amp; Datos Maestros</b></span>\", \"col\": 12}}, {\"id\": \"uze5dJ1ipL\", \"type\": \"card\", \"data\": {\"card_name\": \"Selling\", \"col\": 4}}, {\"id\": \"3j2fYwMAkq\", \"type\": \"card\", \"data\": {\"card_name\": \"Point of Sale\", \"col\": 4}}, {\"id\": \"xImm8NepFt\", \"type\": \"card\", \"data\": {\"card_name\": \"Items and Pricing\", \"col\": 4}}, {\"id\": \"6MjIe7KCQo\", \"type\": \"card\", \"data\": {\"card_name\": \"Settings\", \"col\": 4}}, {\"id\": \"lBu2EKgmJF\", \"type\": \"card\", \"data\": {\"card_name\": \"Reportes clave\", \"col\": 4}}, {\"id\": \"1ARHrjg4kI\", \"type\": \"card\", \"data\": {\"card_name\": \"Other Reports\", \"col\": 4}}]",
  "creation": "2020-01-28 11:49:12.092882",
- "custom_blocks": [],
+ "custom_blocks": [
+  {
+   "custom_block_name": "Costeo Estandar Vigente",
+   "label": "Costeo Estandar Vigente"
+  }
+ ],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -21,7 +26,8 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Selling",
-   "link_count": 0,
+   "link_count": 7,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -106,7 +112,8 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Items and Pricing",
-   "link_count": 0,
+   "link_count": 9,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -213,7 +220,8 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Settings",
-   "link_count": 0,
+   "link_count": 9,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -321,6 +329,7 @@
    "is_query_report": 0,
    "label": "Point of Sale",
    "link_count": 6,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -389,6 +398,7 @@
    "is_query_report": 0,
    "label": "Other Reports",
    "link_count": 11,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -517,7 +527,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reportes clave",
-   "link_count": 10,
+   "link_count": 9,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -620,19 +630,9 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Ventas por Vendedor",
-   "link_count": 0,
-   "link_to": "Ventas por Vendedor",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2026-08-11 10:28:48.470466",
+ "modified": "2026-10-14 16:54:40.149740",
  "modified_by": "bhaidacher@gimsa.com.gt",
  "module": "Selling",
  "name": "Selling",
